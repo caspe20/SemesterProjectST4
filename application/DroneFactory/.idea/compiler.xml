@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="AGV" />
+        <module name="Warehouse" />
+        <module name="UI" />
+        <module name="AssemblyStation" />
+        <module name="Core" />
+        <module name="Common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AGV" target="18" />
+      <module name="AssemblyStation" target="18" />
+      <module name="Common" target="18" />
+      <module name="Core" target="18" />
+      <module name="DroneFactory" target="18" />
+      <module name="UI" target="18" />
+      <module name="Warehouse" target="18" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Core" options="" />
+    </option>
+  </component>
+</project>
