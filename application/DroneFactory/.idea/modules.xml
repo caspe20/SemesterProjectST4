@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AGV/AGV.iml" filepath="$PROJECT_DIR$/AGV/AGV.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" filepath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Common/Common.iml" filepath="$PROJECT_DIR$/Common/Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Core/Core.iml" filepath="$PROJECT_DIR$/Core/Core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DroneFactory.iml" filepath="$PROJECT_DIR$/DroneFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Warehouse/Warehouse.iml" filepath="$PROJECT_DIR$/Warehouse/Warehouse.iml" />
+    </modules>
+  </component>
+</project>
