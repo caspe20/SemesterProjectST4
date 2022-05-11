@@ -4,8 +4,9 @@ import Events.UpdateEvent;
 import Services.IPublisher;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class AGVPublisher implements IPublisher {
 
     private final ApplicationEventPublisher applicationEventPublisher;

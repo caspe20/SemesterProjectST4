@@ -19,7 +19,6 @@
         <module>AGV</module>
         <module>AssemblyStation</module>
         <module>Warehouse</module>
-        <module>UI</module>
     </modules>
 
 </project>

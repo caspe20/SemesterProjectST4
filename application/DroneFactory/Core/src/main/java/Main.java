@@ -1,16 +1,20 @@
-import Events.UpdateEvent;
 import Services.IAGV;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationListener;
+import Services.IUIService;
+import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 
     public static void main(String[] args) {
+
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 
         context.scan("com.sdu");
         context.refresh();
+
+        for (IUIService ui : context.getBeansOfType(IUIService.class).values()){
+            SpringApplication.run(ui.getClass(),args);
+        }
 
         System.out.println("test");
 
@@ -21,9 +25,12 @@ public class Main {
         }
 
         try {
-            Thread.sleep(1000);
+            Thread.sleep(20000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void run(){
     }
 }
