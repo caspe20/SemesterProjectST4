@@ -14,7 +14,7 @@
       <configuration />
     </facet>
   </component>
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_X">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -27,6 +27,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Common" />
     <orderEntry type="module" module-name="AGV" />
+    <orderEntry type="library" name="Maven: com.sdu:UI:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="AssemblyStation" />
+    <orderEntry type="module" module-name="Warehouse" />
+    <orderEntry type="library" name="Maven: com.sdu:serving-web-content:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:2.5.13" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.5.13" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.5.13" level="project" />
@@ -57,9 +61,6 @@
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.62" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.3.19" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.3.19" level="project" />
-    <orderEntry type="module" module-name="AssemblyStation" />
-    <orderEntry type="module" module-name="Warehouse" />
-    <orderEntry type="library" name="Maven: com.sdu:serving-web-content:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:2.5.13" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.19" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.19" level="project" />
