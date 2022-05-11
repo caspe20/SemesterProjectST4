@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2283bf4e-ecc1-4862-a7da-65886ec51885" name="Changes" comment="" />
+    <list default="true" id="2283bf4e-ecc1-4862-a7da-65886ec51885" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prototype/src/main/java/AssemblyStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/prototype/src/main/java/AssemblyStation.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +22,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.catalog" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -29,6 +33,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649420149249</updated>
       <workItem from="1649420152841" duration="77000" />
+      <workItem from="1649515311358" duration="259000" />
     </task>
     <servers />
   </component>
