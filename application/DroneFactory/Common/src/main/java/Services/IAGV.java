@@ -2,6 +2,8 @@ package Services;
 
 public interface IAGV {
     void getState();
+    void getTimeStamp();
+    void getProgramName();
     void pickupPart();
     void pickupDrone();
     void putdownPart();
