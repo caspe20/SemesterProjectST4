@@ -24,7 +24,7 @@ public class AGV implements IAGV {
     ResponseEntity<String> responseEntity = restTemplate.getForEntity(resourceURL1 + "/v1/status/", String.class);
 
     private ObjectMapper mapper = new ObjectMapper();
-    private JsonNode root = mapper.readTree(responseEntity.getBody());
+    private JsonNode root = mapper.readTree(responseEntity.getBody()); //TODO Exeption??
 
     public AGV() {
 
@@ -36,6 +36,13 @@ public class AGV implements IAGV {
         executeTest.put("State", 2);
         restTemplate.put(resourceUrl, executeTest);
     }
+
+    /*
+    TODO
+    Den skal returnere en string i stedet for void - hvad gør vi i forhold til JsonNode?
+    opdatere interfacet
+    Push AGV og Interface når det er rettet.
+     */
 
     @Override
     public void getState() {
@@ -56,7 +63,7 @@ public class AGV implements IAGV {
     }
 
     @Override
-    public void pickupPart() {
+    public void pickUpPart() {
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PickWarehouseOperation");
         request.put("State", 1);
@@ -65,7 +72,7 @@ public class AGV implements IAGV {
     }
 
     @Override
-    public void pickupDrone() {
+    public void pickUpDrone() {
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PickAssemblyOperation");
         request.put("State", 1);
@@ -74,7 +81,7 @@ public class AGV implements IAGV {
     }
 
     @Override
-    public void putdownPart() {
+    public void putDownPart() {
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PutAssemblyOperation");
         request.put("State", 1);
@@ -83,7 +90,7 @@ public class AGV implements IAGV {
     }
 
     @Override
-    public void putdownDrone() {
+    public void putDownDrone() {
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PutWarehouseOperation");
         request.put("State", 1);
@@ -122,7 +129,7 @@ public class AGV implements IAGV {
     @Override
     public boolean isCharging() {
         return false;
-    }
+    } // if state == 3 return true
 
     @Override
     public int getBatteryPercentage() {
