@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/AGV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/AGV.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DroneFactory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DroneFactory.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/Warehouse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/WarehouseConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/WarehouseConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/WarehouseController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
