@@ -16,34 +16,7 @@
             <artifactId>Common</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>AGV</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>${project.groupId}</groupId>-->
-<!--            <artifactId>UI</artifactId>-->
-<!--            <version>${project.version}</version>-->
-<!--        </dependency>-->
-
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>AssemblyStation</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>Warehouse</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>${project.groupId}</groupId>-->
-<!--            <artifactId>serving-web-content</artifactId>-->
-<!--            <version>${project.version}</version>-->
-<!--        </dependency>-->
 
 <!--   Non-project dependencies     -->
 
@@ -60,17 +33,5 @@
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
-                <configuration>
-                    <source>17</source>
-                    <target>17</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
 </project>

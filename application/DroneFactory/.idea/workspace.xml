@@ -47,7 +47,7 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/UI/src/main/java/com/sdu" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.1321004" />
     <property name="project.structure.side.proportion" value="0.22747748" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
@@ -131,6 +131,9 @@
       <workItem from="1652185716086" duration="3174000" />
       <workItem from="1652249350407" duration="1953000" />
       <workItem from="1652257248430" duration="599000" />
+      <workItem from="1652288500123" duration="857000" />
+      <workItem from="1652292008372" duration="1892000" />
+      <workItem from="1652351370210" duration="738000" />
     </task>
     <servers />
   </component>
