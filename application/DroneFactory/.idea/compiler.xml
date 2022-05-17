@@ -8,8 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="AGV" />
         <module name="Warehouse" />
+        <module name="UI" />
         <module name="AssemblyStation" />
         <module name="Common" />
+        <module name="Core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
