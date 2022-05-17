@@ -1,10 +1,38 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org" lang="English">
-<head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-</head>
+
 <body>
-<p th:text="'Hello, ' + ${name} + '!'"></p>
+
+<h2 style="text-align:center;">THE DRONE ZONE</h2>
+
+<table style="width:100%">
+    <tr style="height:150px">
+        <th>Warehouse</th>
+        <th>AGV</th>
+        <th>AssemblyStation</th>
+    </tr>
+    <tr style="height:150px">
+        <td><button type="button">Start Production</button></td>
+        <td> </td>
+        <td><button type="button">Stop Production</button></td>
+
+    </tr>
+    <tr style="height:150px">
+        <td>Connection Status:</td>
+        <td>Connection Status:</td>
+        <td>Connection Status:</td>
+    </tr>
+    <tr style="height:150px">
+        <td>Machine State:</td>
+        <td>Machine State:</td>
+        <td>Machine State:</td>
+    </tr>
+    <tr style="height:150px">
+        <td>Current Operation:</td>
+        <td>Current Operation:</td>
+        <td>Current Operation:</td>
+    </tr>
+</table>
+
 </body>
 </html>

@@ -9,7 +9,6 @@
         <module name="AGV" />
         <module name="Warehouse" />
         <module name="AssemblyStation" />
-        <module name="Core" />
         <module name="Common" />
       </profile>
     </annotationProcessing>
