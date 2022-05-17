@@ -36,11 +36,7 @@
             <artifactId>Warehouse</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>serving-web-content</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+
 
 <!--   Non-project dependencies     -->
 
