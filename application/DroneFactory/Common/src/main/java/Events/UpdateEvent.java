@@ -1,7 +1,5 @@
 package Events;
 
-import org.springframework.context.ApplicationEvent;
-
 public class UpdateEvent {
     private String message;
 

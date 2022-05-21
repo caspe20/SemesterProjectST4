@@ -1,7 +1,7 @@
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
-class AssemblyStation implements MqttCallback{
+class AssemblyStation implements MqttCallback {
 
     public static void main(String[] args) {
         MqttClient client;
@@ -37,7 +37,7 @@ class AssemblyStation implements MqttCallback{
     }
 
     @Override
-    public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
+    public void messageArrived(String s, MqttMessage mqttMessage) {
         System.out.printf("Message '%s' received on topic '%s'", mqttMessage,s);
     }
 
