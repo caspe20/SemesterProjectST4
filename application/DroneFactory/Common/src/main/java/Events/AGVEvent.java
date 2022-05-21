@@ -5,10 +5,12 @@ import org.springframework.context.ApplicationEvent;
 public class AGVEvent extends ApplicationEvent {
 
     public enum EventType{
-        PART_DELIVERED_TO_ASSEMBLY_STATION(0),
-        DRONE_MOVED_TO_WAREHOUSE(1),
-        STARTED_CHARGING(2),
-        CHARGING_DONE(3);
+        READY_TO_PICK_UP(0),
+        PART_DELIVERED_TO_ASSEMBLY_STATION(1),
+        DRONE_MOVED_TO_WAREHOUSE(2),
+        STARTED_CHARGING(3),
+        CHARGING_DONE(4),
+        PART_MOVED_TO_ASSEMBLY_STATION(5);
 
         private final int eventId;
 

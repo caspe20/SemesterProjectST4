@@ -6,7 +6,9 @@ public class AssemblyStationEvent extends ApplicationEvent {
 
     public enum EventType{
         READY_TO_ASSEMBLY(0),
-        ASSEMBLING_DONE(1);
+        ASSEMBLING_DONE(1),
+        READY_TO_RECEIVE_PART(2),
+        READY_TO_DISPENSE_DRONE(3);
 
         private final int eventId;
 
