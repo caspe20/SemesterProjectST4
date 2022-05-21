@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Events/AGVEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/Events/AGVEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Events/AssemblyStationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/Events/AssemblyStationEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Events/WarehouseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/Events/WarehouseEvent.java" afterDir="false" />
-    </list>
+    <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +48,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/UI/src/main/java/com/sdu" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SEMPRO_TEST/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../SOAPdemo/pom.xml" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.1321004" />
@@ -161,12 +149,6 @@
       <workItem from="1652288500123" duration="857000" />
       <workItem from="1652292008372" duration="1892000" />
       <workItem from="1652351370210" duration="738000" />
-      <workItem from="1652359197688" duration="1157000" />
-      <workItem from="1652424274300" duration="3424000" />
-      <workItem from="1652432628665" duration="5422000" />
-      <workItem from="1652770746094" duration="5042000" />
-      <workItem from="1652781427407" duration="674000" />
-      <workItem from="1653117578773" duration="364000" />
     </task>
     <servers />
   </component>
