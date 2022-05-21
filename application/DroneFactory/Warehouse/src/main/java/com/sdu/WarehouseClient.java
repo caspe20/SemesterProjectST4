@@ -23,6 +23,7 @@ public class WarehouseClient implements IWarehouse {
     public WarehouseClient() {
         // Initialize the inventory list
         inventory = new JSONArray();
+        state = WarehouseState.getWarehouseState(0);
 
         // Construct the template communication device of the warehouse client
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
@@ -36,10 +37,8 @@ public class WarehouseClient implements IWarehouse {
         updateThread = new Thread(()->{
             try {
                 while (true){
-
                     // Get json string of the inventory
                     JSONObject obj = new JSONObject(getInventoryFromWarehouse());
-                    System.out.println(obj);
 
                     if(WarehouseState.getWarehouseState(obj.getInt("State")) != state || obj.getJSONArray("Inventory").equals(inventory)){
                         // Update variables
@@ -94,7 +93,6 @@ public class WarehouseClient implements IWarehouse {
         item.setTrayId(trayId);
         item.setName("Drone");
         InsertItemResponse response = (InsertItemResponse) template.marshalSendAndReceive(host, item);
-        System.out.println(response.getInsertItemResult());
         // Send insertedPart event here
 
     }
