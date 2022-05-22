@@ -13,6 +13,8 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
 import java.text.SimpleDateFormat;
 import java.sql.Timestamp;
@@ -21,21 +23,10 @@ import java.util.Date;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/**
- * TODO
- * add some kind of delay, mosts tests fail unless run again
- * add execute test
- */
-
-
 public class TestAGV {
 
     private AGV agv;
     boolean test;
-
-//    public TestAGV() throws JsonProcessingException {
-//        agv = new AGV();
-//    }
 
     //Det er denne Mette har kaldt "before()"
     @BeforeEach
@@ -46,8 +37,9 @@ public class TestAGV {
     @Test
     public void getState() {
         if (agv.getState().equals("1") || agv.getState().equals("2") || agv.getState().equals("3")) {
-            assertTrue(test);
             test = true;
+            assertTrue(test);
+
         }
         assertTrue(test);
     }
@@ -76,8 +68,8 @@ public class TestAGV {
         boolean isCharging = false;
         if (agv.getState() == "3") {
             isCharging = true;
+            assertTrue(isCharging);
         }
-        assertTrue(isCharging);
         assertFalse(isCharging);
     }
 
@@ -122,9 +114,8 @@ public class TestAGV {
     @Test
     public void goToCharger() throws InterruptedException {
         agv.goToCharger();
-        Thread.sleep(500);
-        System.out.println("AGV is charging");
         if (agv.getBatteryPercentage() > 100) {
+            System.out.println("AGV is charging");
             assertTrue(agv.isCharging());
         } else {
             assertTrue(Objects.equals(agv.getProgramName(), "\"MoveToChargerOperation\""));
@@ -135,8 +126,6 @@ public class TestAGV {
     // The method works, but the timezone is wrong. Look into this.
     @Test
     public void getTimeStamp() {
-
-
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSSSXXX");
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         System.out.println(date.format(timestamp));
@@ -148,13 +137,26 @@ public class TestAGV {
         //   assertSame(agv.getTimeStamp(), cal);
     }
 
-    @AfterEach
+    @Test
     public void execute() {
+        agv.execute();
+        if (agv.getState() == "3") {
+            assertTrue(test);
+        } else {
+            assertFalse(test);
+        }
+    }
+
+    @Test
+    public void testConnection() {
+        final RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8082/v1/status/", String.class);
+        assertNotNull(responseEntity);
     }
 
     @AfterAll
-
     public static void tearDown() {
+
     }
 
 }

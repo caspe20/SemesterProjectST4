@@ -23,14 +23,10 @@ public class AGV implements IAGV {
     }
 
     private final String resourceUrl = "http://localhost:8082/v1/status/";
-
-    final RestTemplate restTemplate = new RestTemplate();
-    final String resourceURL1 = "http://localhost:8082";
-
-    ResponseEntity<String> responseEntity = restTemplate.getForEntity(resourceURL1 + "/v1/status/", String.class);
-    final ObjectMapper mapper = new ObjectMapper();
-
-    final JsonNode root = mapper.readTree(responseEntity.getBody());
+    private final RestTemplate restTemplate = new RestTemplate();
+    private ResponseEntity<String> responseEntity = restTemplate.getForEntity(resourceUrl, String.class);
+    private final ObjectMapper mapper = new ObjectMapper();
+    private final JsonNode root = mapper.readTree(responseEntity.getBody());
 
     //Execute method - OBS is needed for every method
     public void execute() {
@@ -38,7 +34,6 @@ public class AGV implements IAGV {
         executeTest.put("State", 2);
         restTemplate.put(resourceUrl, executeTest);
     }
-
 
 
     @Override
