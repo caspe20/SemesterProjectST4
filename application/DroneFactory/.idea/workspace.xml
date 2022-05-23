@@ -8,14 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/webapp/greeting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/resources/templates/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/resources/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +102,14 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.just run">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Core" />
       <method v="2">
         <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean install" />
         <option name="Make" enabled="true" />
-        <option name="LaunchBrowser.Before.Run" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" url="localhost:8080/greeting" />
+        <option name="LaunchBrowser.Before.Run" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" url="localhost:8080/greeting" />
       </method>
     </configuration>
     <configuration name="just run" type="Application" factoryName="Application">

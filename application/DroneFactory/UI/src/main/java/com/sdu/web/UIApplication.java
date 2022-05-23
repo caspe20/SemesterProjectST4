@@ -21,6 +21,12 @@ import org.springframework.web.servlet.view.JstlView;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, SecurityAutoConfiguration.class},scanBasePackages = "com.sdu.web")
 public class UIApplication implements IUIService {
 
+    private UIController controller;
+
+    public UIApplication(UIController controller) {
+        this.controller = controller;
+    }
+
     @Override
     public void run(String[] args) {
         SpringApplication.run(UIApplication.class, args);
@@ -28,10 +34,7 @@ public class UIApplication implements IUIService {
 
     @Override
     public void update(String json) {
-
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.scan("com.sdu");
-        context.refresh();
+        controller.send(json);
     }
 
     @GetMapping("/sample")
