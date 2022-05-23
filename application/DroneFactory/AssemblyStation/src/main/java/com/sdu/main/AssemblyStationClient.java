@@ -33,6 +33,8 @@ public class AssemblyStationClient implements IAssemblyStation {
                 // Maps mqtt message into a Json object
                 JSONObject obj = new JSONObject(msg.toString());
                 // Maps current state to this object
+                System.out.println(obj);
+
                 switch ((int) obj.get("State")) {
                     case 0:
                         state = "Idle";
@@ -52,11 +54,12 @@ public class AssemblyStationClient implements IAssemblyStation {
 
                 // Maps current time to this object
                 timestamp = (String) obj.get("TimeStamp");
-
             });
+            System.out.println("1");
             // Subscribes to check health and execute the lambda function to see if the produced product is healthy
             client.subscribe("emulator/checkhealth", (topic, msg) -> {
                 // Interprets the json file
+                System.out.println("ey!");
                 String[] jsonResponse = msg.toString().replaceAll("[{}' \"]","").split(":");
                 lastProductWasHealthy = jsonResponse[1].equals("true");
                 done = true;
@@ -71,7 +74,9 @@ public class AssemblyStationClient implements IAssemblyStation {
     @Override
     public void construct() {
         try {
-            client.publish("emulator/operation", new MqttMessage(new JSONObject().put("ProcessID", batchID++).toString().getBytes()));
+            client.publish("emulator/operation",
+                    new MqttMessage(new JSONObject()
+                            .put("ProcessID", batchID++).toString().getBytes()));
             constructing = true;
             done = false;
         } catch (MqttException | JSONException e) {
@@ -97,5 +102,9 @@ public class AssemblyStationClient implements IAssemblyStation {
     @Override
     public String getState() {
         return state;
+    }
+
+    public boolean isLastProductWasHealthy() {
+        return lastProductWasHealthy;
     }
 }
