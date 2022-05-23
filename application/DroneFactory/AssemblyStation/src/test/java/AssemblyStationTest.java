@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AssemblyStationTest {
-    private final AssemblyStationClient assemblyStation = new AssemblyStationClient();
+    private AssemblyStationClient assemblyStation;
     private boolean test;
 
     @BeforeEach
     public void init() {
-        assemblyStation.construct();
+        assemblyStation = new AssemblyStationClient();
         test = false;
     }
 
@@ -40,9 +40,17 @@ public class AssemblyStationTest {
 
     @Test
     public void checkHealth() {
-        //assemblyStation.construct();
+        assemblyStation.construct();
         //TODO needs to be constructed before any other test
         //TODO doesn't reach subscribing to checkHealth
+
+        // Wait for 5000 ms (5s)
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         System.out.println(assemblyStation.checkProductHealth());
     }
 
@@ -57,6 +65,13 @@ public class AssemblyStationTest {
     @Test
     public void checkState() {
         assemblyStation.construct();
+
+        // Wait for 1000 ms (1s)
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println(assemblyStation.getState());
         //Returns null?????
     }

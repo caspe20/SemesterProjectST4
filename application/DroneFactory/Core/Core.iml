@@ -27,8 +27,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="Common" />
     <orderEntry type="module" module-name="AGV" />
-    <orderEntry type="library" name="Maven: com.sdu:UI:1.0-SNAPSHOT" level="project" />
     <orderEntry type="module" module-name="AssemblyStation" />
+    <orderEntry type="library" name="Maven: org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5" level="project" />
+    <orderEntry type="library" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
     <orderEntry type="module" module-name="Warehouse" />
     <orderEntry type="library" name="Maven: com.sdu:serving-web-content:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:2.5.13" level="project" />

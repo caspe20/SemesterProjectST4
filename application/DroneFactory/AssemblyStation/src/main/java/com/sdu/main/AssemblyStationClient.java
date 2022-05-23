@@ -33,6 +33,8 @@ public class AssemblyStationClient implements IAssemblyStation {
                 // Maps mqtt message into a Json object
                 JSONObject obj = new JSONObject(msg.toString());
                 // Maps current state to this object
+                System.out.println(obj);
+
                 switch ((int) obj.get("State")) {
                     case 0:
                         state = "Idle";
