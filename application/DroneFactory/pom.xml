@@ -23,7 +23,9 @@
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
+        <org.springframework.version>5.3.19</org.springframework.version>
     </properties>
+
 
     <modules>
         <module>Core</module>
@@ -31,14 +33,22 @@
         <module>AGV</module>
         <module>AssemblyStation</module>
         <module>Warehouse</module>
+        <module>UI</module>
+
     </modules>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.3.19</version>
+            <version>${org.springframework.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>
