@@ -5,17 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGV/AGV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/AGV.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DroneFactory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DroneFactory.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/Warehouse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +36,18 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
   </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
@@ -99,7 +107,18 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestAGV.getTimeStamp">
+  <component name="RunManager" selected="JUnit.TestAGV.pickUpPart">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Core" />
@@ -109,12 +128,10 @@
         <option name="LaunchBrowser.Before.Run" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" url="localhost:8080/greeting" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
+    <configuration name="TestAGV" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AGV" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAGV" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,49 +157,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestAGV.pickUpPart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AGV" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAGV" />
+      <option name="METHOD_NAME" value="pickUpPart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -211,25 +202,22 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.just run" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Docker.dc up" />
-      <item itemvalue="HTTP Request.generated-requests#5" />
-      <item itemvalue="HTTP Request.generated-requests#6" />
-      <item itemvalue="HTTP Request.generated-requests#7" />
-      <item itemvalue="Spring Boot.UIApplication (1)" />
-      <item itemvalue="Spring Boot.UIApplication" />
       <item itemvalue="JUnit.TestAGV.getState" />
       <item itemvalue="JUnit.TestAGV.getTimeStamp" />
+      <item itemvalue="Spring Boot.UIApplication (2)" />
+      <item itemvalue="Spring Boot.UIApplication (1)" />
+      <item itemvalue="JUnit.TestAGV" />
+      <item itemvalue="JUnit.TestAGV.pickUpPart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAGV.pickUpPart" />
+        <item itemvalue="JUnit.TestAGV" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestAGV.getTimeStamp" />
         <item itemvalue="JUnit.TestAGV.getState" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="HTTP Request.generated-requests#5" />
-        <item itemvalue="HTTP Request.generated-requests#7" />
-        <item itemvalue="HTTP Request.generated-requests#6" />
       </list>
     </recent_temporary>
   </component>
@@ -254,6 +242,7 @@
       <workItem from="1652249350407" duration="1953000" />
       <workItem from="1652257248430" duration="599000" />
       <workItem from="1653119713405" duration="10094000" />
+      <workItem from="1653308659049" duration="357000" />
     </task>
     <servers />
   </component>
