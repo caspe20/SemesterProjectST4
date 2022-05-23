@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/webapp/greeting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/resources/templates/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssemblyStation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +98,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.just run">
+  <component name="RunManager" selected="JUnit.AssemblyStationTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Core" />
@@ -133,6 +123,15 @@
     </configuration>
     <configuration name="generated-requests#7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" runType="Run single request">
       <method v="2" />
+    </configuration>
+    <configuration name="AssemblyStationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AssemblyStation" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AssemblyStationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -159,19 +158,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UIApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="UI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sdu.uiapp.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sdu.uiapp.app.UIApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="dc up" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -190,10 +176,11 @@
       <item itemvalue="HTTP Request.generated-requests#7" />
       <item itemvalue="Spring Boot.UIApplication (1)" />
       <item itemvalue="Spring Boot.UIApplication (2)" />
-      <item itemvalue="Spring Boot.UIApplication" />
+      <item itemvalue="JUnit.AssemblyStationTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AssemblyStationTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="HTTP Request.generated-requests#5" />
         <item itemvalue="HTTP Request.generated-requests#7" />
