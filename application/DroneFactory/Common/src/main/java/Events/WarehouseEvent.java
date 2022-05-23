@@ -6,8 +6,9 @@ public class WarehouseEvent extends ApplicationEvent {
 
     public enum EventType{
         READY_TO_DISPENSE_PART(0),
-        READY_TO_STORE_DRONE(1),
-        PART_READY_FOR_PICKUP(2);
+        PART_READY_FOR_PICKUP(1),
+        READY_TO_RECEIVE_DRONE(2),
+        DRONE_STORED(3);
 
         private final int eventId;
 

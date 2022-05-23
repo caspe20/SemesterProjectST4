@@ -5,10 +5,9 @@ import org.springframework.context.ApplicationEvent;
 public class AssemblyStationEvent extends ApplicationEvent {
 
     public enum EventType{
-        READY_TO_ASSEMBLY(0),
-        ASSEMBLING_DONE(1),
-        READY_TO_RECEIVE_PART(2),
-        READY_TO_DISPENSE_DRONE(3);
+        READY_TO_RECEIVE_PART(0),
+        READY_TO_ASSEMBLY(1),
+        READY_TO_DISPENSE_DRONE(2);
 
         private final int eventId;
 

@@ -6,11 +6,10 @@ public class AGVEvent extends ApplicationEvent {
 
     public enum EventType{
         READY_TO_PICK_UP(0),
-        PART_DELIVERED_TO_ASSEMBLY_STATION(1),
-        DRONE_MOVED_TO_WAREHOUSE(2),
-        STARTED_CHARGING(3),
-        CHARGING_DONE(4),
-        PART_MOVED_TO_ASSEMBLY_STATION(5);
+        PART_PICKED_UP(1),
+        PART_MOVED_TO_ASSEMBLY_STATION(2),
+        DRONE_PICKED_UP(3),
+        MOVED_TO_WAREHOUSE(4);
 
         private final int eventId;
 

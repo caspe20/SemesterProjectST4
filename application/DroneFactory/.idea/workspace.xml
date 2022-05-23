@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="" />
+    <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/AGV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/AGV.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Events/AGVEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/Events/AGVEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Events/AssemblyStationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/Events/AssemblyStationEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Events/WarehouseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/Events/WarehouseEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DroneFactory.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/Warehouse.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,8 +42,27 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="28TPDuygG0f1ZbZT0CFKDlADEgz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -45,10 +77,9 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/UI/src/main/java/com/sdu" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../SOAPdemo/pom.xml" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SEMPRO_TEST/pom.xml" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.1321004" />
@@ -70,7 +101,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Core" />
@@ -124,8 +155,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +180,10 @@
       <workItem from="1652288500123" duration="857000" />
       <workItem from="1652292008372" duration="1892000" />
       <workItem from="1652351370210" duration="738000" />
+      <workItem from="1653134758758" duration="348000" />
+      <workItem from="1653135159124" duration="260000" />
+      <workItem from="1653135459774" duration="4039000" />
+      <workItem from="1653203987229" duration="3858000" />
     </task>
     <servers />
   </component>
