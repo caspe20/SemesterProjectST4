@@ -8,13 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="AGV" />
         <module name="Warehouse" />
+        <module name="UI" />
         <module name="AssemblyStation" />
         <module name="Core" />
         <module name="Common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="AGV" target="18" />
+      <module name="AGV" target="15" />
       <module name="AssemblyStation" target="18" />
       <module name="Common" target="18" />
       <module name="Core" target="18" />
@@ -29,6 +30,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Core" options="" />
       <module name="UI" options="" />
+      <module name="Warehouse" options="-parameters" />
       <module name="serving-web-content" options="" />
     </option>
   </component>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" lang="English">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="English">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" th:href="@{style.css}">
 
 <body>
 
