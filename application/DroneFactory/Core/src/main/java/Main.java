@@ -15,10 +15,7 @@ public class Main {
         context.refresh();
 
         for (IUIService ui : context.getBeansOfType(IUIService.class).values()){
-//            Thread t = new Thread(()->{
                 ui.run(args);
-//            });
-//            t.start();
         }
 
         System.out.println("test");

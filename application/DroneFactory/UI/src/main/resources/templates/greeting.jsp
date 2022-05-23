@@ -1,8 +1,15 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="English">
 
-<link rel="stylesheet" th:href="@{style.css}">
-
+<link rel="stylesheet" th:href="@{../static/css/style.css}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        console.log("jquery loaded!")
+        var url = "http://localhost:8080/sse";
+        var listener = new EventSource(url);
+    })
+</script>
 <body>
 
 <h1>THE DRONE ZONE</h1>

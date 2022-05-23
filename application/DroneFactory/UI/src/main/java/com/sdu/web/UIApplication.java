@@ -1,10 +1,12 @@
 package com.sdu.web;
 
 import Services.IUIService;
+import com.sdu.web.controller.UIController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
@@ -26,7 +28,10 @@ public class UIApplication implements IUIService {
 
     @Override
     public void update(String json) {
-        System.out.println( this.getClass().toString() + " Json: {\n" + json + "\n}");
+
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+        context.scan("com.sdu");
+        context.refresh();
     }
 
     @GetMapping("/sample")

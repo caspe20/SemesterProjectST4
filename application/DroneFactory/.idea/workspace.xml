@@ -5,24 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/AGV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/AGV.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DroneFactory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DroneFactory.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/controllers/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.html" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/Warehouse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/java/webapp/greeting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/resources/templates/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/resources/static/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +55,7 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
   </component>
@@ -73,6 +66,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -101,6 +95,7 @@
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\static\css" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\templates" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\static" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\java\webapp" />
@@ -113,7 +108,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.just run">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Core" />
@@ -121,6 +116,13 @@
         <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean install" />
         <option name="Make" enabled="true" />
         <option name="LaunchBrowser.Before.Run" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" url="localhost:8080/greeting" />
+      </method>
+    </configuration>
+    <configuration name="just run" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Core" />
+      <method v="2">
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="generated-requests#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" runType="Run single request">
@@ -180,14 +182,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.just run" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Docker.dc up" />
       <item itemvalue="HTTP Request.generated-requests#5" />
       <item itemvalue="HTTP Request.generated-requests#6" />
       <item itemvalue="HTTP Request.generated-requests#7" />
       <item itemvalue="Spring Boot.UIApplication (1)" />
       <item itemvalue="Spring Boot.UIApplication (2)" />
       <item itemvalue="Spring Boot.UIApplication" />
-      <item itemvalue="Docker.dc up" />
     </list>
     <recent_temporary>
       <list>
@@ -240,6 +243,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
