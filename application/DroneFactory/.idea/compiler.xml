@@ -15,10 +15,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="AGV" target="15" />
-      <module name="AssemblyStation" target="18" />
-      <module name="Common" target="18" />
-      <module name="Core" target="18" />
+      <module name="AGV" target="17" />
+      <module name="AssemblyStation" target="17" />
+      <module name="Common" target="15" />
+      <module name="Core" target="15" />
       <module name="DroneFactory" target="18" />
       <module name="serving-web-content" target="18" />
       <module name="UI" target="18" />

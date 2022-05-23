@@ -6,23 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGV/AGV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/AGV.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DroneFactory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DroneFactory.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/controllers/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.html" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/Warehouse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +37,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AGV/pom.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGV.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Common/src/main/java/Events/UpdateEvent.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Core/src/main/java/Main.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
@@ -62,9 +45,12 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="28TPDuygG0f1ZbZT0CFKDlADEgz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -73,6 +59,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -82,13 +69,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/UI/src/main/java/com/sdu" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Skrivebord/Black hole/com.infolinks.idea.plugins.bundle_8635.zip" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.13769531" />
     <property name="project.structure.side.proportion" value="0.22747748" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -101,10 +89,16 @@
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\static\css" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\templates" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\static" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\java\webapp" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -113,7 +107,18 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.TestAGV.pickUpPart">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Core" />
@@ -123,14 +128,44 @@
         <option name="LaunchBrowser.Before.Run" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" url="localhost:8080/greeting" />
       </method>
     </configuration>
-    <configuration name="generated-requests#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" runType="Run single request">
-      <method v="2" />
+    <configuration name="TestAGV" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AGV" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAGV" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="generated-requests#6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="6" runType="Run single request">
-      <method v="2" />
+    <configuration name="TestAGV.getState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AGV" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAGV" />
+      <option name="METHOD_NAME" value="getState" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="generated-requests#7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" runType="Run single request">
-      <method v="2" />
+    <configuration name="TestAGV.getTimeStamp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AGV" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAGV" />
+      <option name="METHOD_NAME" value="getTimeStamp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAGV.pickUpPart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AGV" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestAGV" />
+      <option name="METHOD_NAME" value="pickUpPart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -157,19 +192,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UIApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="UI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sdu.uiapp.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sdu.uiapp.app.UIApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="dc up" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -181,20 +203,21 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="HTTP Request.generated-requests#5" />
-      <item itemvalue="HTTP Request.generated-requests#6" />
-      <item itemvalue="HTTP Request.generated-requests#7" />
-      <item itemvalue="Spring Boot.UIApplication (1)" />
-      <item itemvalue="Spring Boot.UIApplication (2)" />
-      <item itemvalue="Spring Boot.UIApplication" />
       <item itemvalue="Docker.dc up" />
+      <item itemvalue="JUnit.TestAGV.getState" />
+      <item itemvalue="JUnit.TestAGV.getTimeStamp" />
+      <item itemvalue="Spring Boot.UIApplication (2)" />
+      <item itemvalue="Spring Boot.UIApplication (1)" />
+      <item itemvalue="JUnit.TestAGV" />
+      <item itemvalue="JUnit.TestAGV.pickUpPart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAGV.pickUpPart" />
+        <item itemvalue="JUnit.TestAGV" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="HTTP Request.generated-requests#5" />
-        <item itemvalue="HTTP Request.generated-requests#7" />
-        <item itemvalue="HTTP Request.generated-requests#6" />
+        <item itemvalue="JUnit.TestAGV.getTimeStamp" />
+        <item itemvalue="JUnit.TestAGV.getState" />
       </list>
     </recent_temporary>
   </component>
@@ -218,11 +241,8 @@
       <workItem from="1652185716086" duration="3174000" />
       <workItem from="1652249350407" duration="1953000" />
       <workItem from="1652257248430" duration="599000" />
-      <workItem from="1653161570490" duration="31000" />
-      <workItem from="1653202063536" duration="3520000" />
-      <workItem from="1653206300889" duration="14262000" />
-      <workItem from="1653249492246" duration="21000" />
-      <workItem from="1653249533840" duration="171000" />
+      <workItem from="1653119713405" duration="10094000" />
+      <workItem from="1653308659049" duration="357000" />
     </task>
     <servers />
   </component>
@@ -240,6 +260,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -15,18 +15,21 @@ public class Main {
         context.refresh();
 
         for (IUIService ui : context.getBeansOfType(IUIService.class).values()){
-//            Thread t = new Thread(()->{
                 ui.run(args);
-//            });
-//            t.start();
         }
 
         System.out.println("test");
 
-        for (IAGV agv :
-                context.getBeansOfType(IAGV.class).values()) {
+        for (IAssemblyStation agv :
+                context.getBeansOfType(IAssemblyStation.class).values()) {
             System.out.println("test2");
-            agv.getState();
+            agv.construct();
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(agv.getState());
         }
 
         for (IAssemblyStation assemblyStation :
