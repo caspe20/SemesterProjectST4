@@ -6,41 +6,31 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.View;
-import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.view.BeanNameViewResolver;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
 
 @Service
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, SecurityAutoConfiguration.class},scanBasePackages = "com.sdu.web")
 public class UIApplication implements IUIService {
 
+    ApplicationContext webApplicationContext;
+
     @Override
     public void run(String[] args) {
-        SpringApplication.run(UIApplication.class, args);
+        webApplicationContext = SpringApplication.run(UIApplication.class,args);
+        UIController controller = webApplicationContext.getBean(UIController.class);
+        controller.setGateway(this);
     }
 
     @Override
     public void update(String json) {
-
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.scan("com.sdu");
-        context.refresh();
+        for (UIController value : webApplicationContext.getBeansOfType(UIController.class).values()) {
+            value.pushUpdateString(json);
+        }
     }
 
-    @GetMapping("/sample")
-    public String show(){
-        return "greeting";
+    public void startProduction() {
+        // publish event here for starting production.
+        System.out.println("Yes my dear, it does indeed work!");
     }
-
-//    @Bean
-//    public ViewResolver resolver(){
-//
-//    }
 }
