@@ -1,12 +1,10 @@
 package com.sdu.main;
 
-import Services.IAssemblyStation;
+import services.IAssemblyStation;
 import org.eclipse.paho.client.mqttv3.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
-
-import java.util.Map;
 
 @Service
 public class AssemblyStationClient implements IAssemblyStation {
@@ -14,15 +12,19 @@ public class AssemblyStationClient implements IAssemblyStation {
     MqttClient client;
     int lastOperation;
     int currentOperation;
-    String state;
+    String state = "";
     String timestamp;
     private boolean constructing = false;
     private boolean done = false;
     boolean lastProductWasHealthy = true;
     private int batchID = 0;
+    JSONObject wholeStatus;
+    String healthStatus = "";
 
+    private static AssemblyStationClient assemblyStationClient = null;
 
-    public AssemblyStationClient() {
+    private AssemblyStationClient() {
+
         // Establish connection
         try {
             this.client = new MqttClient("tcp://localhost:1883", "1");
@@ -32,6 +34,7 @@ public class AssemblyStationClient implements IAssemblyStation {
             client.subscribe("emulator/status", (topic, msg) -> {
                 // Maps mqtt message into a Json object
                 JSONObject obj = new JSONObject(msg.toString());
+                wholeStatus = obj;
                 // Maps current state to this object
 
                 switch ((int) obj.get("State")) {
@@ -54,11 +57,10 @@ public class AssemblyStationClient implements IAssemblyStation {
                 // Maps current time to this object
                 timestamp = (String) obj.get("TimeStamp");
             });
-            System.out.println("1");
             // Subscribes to check health and execute the lambda function to see if the produced product is healthy
             client.subscribe("emulator/checkhealth", (topic, msg) -> {
                 // Interprets the json file
-                System.out.println("ey!");
+                healthStatus = msg.toString();
                 String[] jsonResponse = msg.toString().replaceAll("[{}' \"]","").split(":");
                 lastProductWasHealthy = jsonResponse[1].equals("true");
                 done = true;
@@ -67,7 +69,19 @@ public class AssemblyStationClient implements IAssemblyStation {
         } catch (MqttException e) {
             throw new RuntimeException(e);
         }
+
+        Thread thread = new Thread(new AssemblyStationPublisher(this));
+        thread.start();
+
     }
+
+
+    public static AssemblyStationClient getInstance()  {
+        if (assemblyStationClient == null)
+            assemblyStationClient = new AssemblyStationClient();
+        return assemblyStationClient;
+    }
+
 
 
     @Override
@@ -77,6 +91,7 @@ public class AssemblyStationClient implements IAssemblyStation {
                     new MqttMessage(new JSONObject()
                             .put("ProcessID", batchID++).toString().getBytes()));
             constructing = true;
+            System.out.println(constructing);
             done = false;
         } catch (MqttException | JSONException e) {
             throw new RuntimeException(e);
@@ -106,4 +121,42 @@ public class AssemblyStationClient implements IAssemblyStation {
     public boolean isLastProductWasHealthy() {
         return lastProductWasHealthy;
     }
+
+    public JSONObject getWholeStatus() {
+        return wholeStatus;
+    }
+
+    public String getHealthStatus() {
+        return healthStatus;
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        AssemblyStationClient assemblyStationClient = new AssemblyStationClient();
+//
+//        Thread.sleep(1000);
+//        System.out.println(assemblyStationClient.getWholeStatus());
+//        System.out.println(assemblyStationClient.getHealthStatus());
+//
+//        assemblyStationClient.construct();
+//
+//        while(!assemblyStationClient.isDone()){
+//            Thread.sleep(100);
+//        }
+//
+//
+//        System.out.println(assemblyStationClient.getWholeStatus());
+//        System.out.println(assemblyStationClient.getHealthStatus());
+
+
+
+//        while (assemblyStationClient.isConstructing()) {
+//
+//        }
+
+
+
+
+    }
+
+
 }

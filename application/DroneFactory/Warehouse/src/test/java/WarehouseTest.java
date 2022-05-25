@@ -20,7 +20,7 @@ public class WarehouseTest {
 
     @BeforeEach
     public void init() {
-        warehouseClient = new WarehouseClient();
+        warehouseClient = WarehouseClient.getInstance();
         test = false;
     }
 

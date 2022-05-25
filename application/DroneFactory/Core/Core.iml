@@ -25,7 +25,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_15">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_X">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -111,7 +111,6 @@
     <orderEntry type="library" name="Maven: org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.5" level="project" />
     <orderEntry type="library" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
     <orderEntry type="module" module-name="Warehouse" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:Common:2.6.3" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.3.0-b170201.1204" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.5" level="project" />

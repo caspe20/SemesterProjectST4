@@ -1,6 +1,7 @@
 package com.sdu;
 
-import Services.IWarehouse;
+import events.WarehouseEvent;
+import services.IWarehouse;
 import com.sdu.wsdl.*;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,6 +12,10 @@ import org.springframework.ws.client.core.WebServiceTemplate;
 
 @Service
 public class WarehouseClient implements IWarehouse {
+
+    private int trayIdNextPart = 1;
+    private int trayIdNextDrone = 1;
+
     // Warehouse specific variables
     private WarehouseState state = null;
     private JSONArray inventory;
@@ -20,7 +25,10 @@ public class WarehouseClient implements IWarehouse {
     final private String host = "http://localhost:8081/Service.asmx";
     private Thread updateThread;
 
-    public WarehouseClient() {
+    private static WarehouseClient warehouseClient = null;
+
+    private WarehouseClient() {
+
         // Initialize the inventory list
         inventory = new JSONArray();
         state = WarehouseState.getWarehouseState(0);
@@ -39,12 +47,10 @@ public class WarehouseClient implements IWarehouse {
                 while (true){
                     // Get json string of the inventory
                     JSONObject obj = new JSONObject(getInventoryFromWarehouse());
-
-                    if(WarehouseState.getWarehouseState(obj.getInt("State")) != state || obj.getJSONArray("Inventory").equals(inventory)){
+                    if(WarehouseState.getWarehouseState(obj.getInt("State")) != state || !obj.getJSONArray("Inventory").equals(inventory)){
                         // Update variables
                         state = WarehouseState.getWarehouseState(obj.getInt("State"));
                         inventory = obj.getJSONArray("Inventory");
-
                         // Make updateEvent happen here:
 
                         // End event
@@ -62,6 +68,15 @@ public class WarehouseClient implements IWarehouse {
         //GetInventoryResponse response = (GetInventoryResponse) template.marshalSendAndReceive("http://localhost:8081/Service.asmx", request);
 
         //System.out.println(response.getGetInventoryResult());
+
+        Thread thread = new Thread(new WarehousePublisher(this));
+        thread.start();
+    }
+
+    public static WarehouseClient getInstance()  {
+        if (warehouseClient == null)
+            warehouseClient = new WarehouseClient();
+        return warehouseClient;
     }
 
     private String getInventoryFromWarehouse() {
@@ -84,8 +99,11 @@ public class WarehouseClient implements IWarehouse {
         PickItem item = new PickItem();
         item.setTrayId(trayId);
         PickItemResponse response = (PickItemResponse) template.marshalSendAndReceive(host, item);
+        trayIdNextPart++;
         // send dispensedPart event here
     }
+
+
 
     @Override
     public void insertDrone(int trayId) {
@@ -93,8 +111,17 @@ public class WarehouseClient implements IWarehouse {
         item.setTrayId(trayId);
         item.setName("Drone");
         InsertItemResponse response = (InsertItemResponse) template.marshalSendAndReceive(host, item);
+        trayIdNextDrone++;
         // Send insertedPart event here
-
     }
+
+    public int getTrayIdNextPart() {
+        return trayIdNextPart;
+    }
+
+    public int getTrayIdNextDrone() {
+        return trayIdNextDrone;
+    }
+
 
 }

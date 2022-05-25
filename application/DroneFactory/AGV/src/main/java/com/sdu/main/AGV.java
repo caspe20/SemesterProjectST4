@@ -1,6 +1,9 @@
 package com.sdu.main;
 
-import Services.IAGV;
+import org.springframework.context.ApplicationEvent;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import services.IAGV;
 import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -18,15 +21,28 @@ import java.util.HashMap;
 @Service
 public class AGV implements IAGV {
 
-    public AGV() throws JsonProcessingException {
-
-    }
-
     private final String resourceUrl = "http://localhost:8082/v1/status/";
     private final RestTemplate restTemplate = new RestTemplate();
     private ResponseEntity<String> responseEntity = restTemplate.getForEntity(resourceUrl, String.class);
     private final ObjectMapper mapper = new ObjectMapper();
     private final JsonNode root = mapper.readTree(responseEntity.getBody());
+
+    public JsonNode getRoot() {
+        return root;
+    }
+
+    private static AGV agv = null;
+
+    private AGV() throws JsonProcessingException {
+        Thread thread = new Thread(new AGVEventPublisher(this));
+        thread.start();
+    }
+
+    public static AGV getInstance() throws JsonProcessingException {
+        if (agv == null)
+            agv = new AGV();
+        return agv;
+    }
 
     //Execute method - OBS is needed for every method
     public void execute() {

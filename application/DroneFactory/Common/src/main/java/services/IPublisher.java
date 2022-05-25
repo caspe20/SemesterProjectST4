@@ -1,4 +1,4 @@
-package Services;
+package services;
 
 public interface IPublisher {
     // remember if shit hits the fan, then do the final string message

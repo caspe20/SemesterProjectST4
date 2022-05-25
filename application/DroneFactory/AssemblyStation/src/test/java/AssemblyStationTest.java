@@ -11,7 +11,7 @@ public class AssemblyStationTest {
 
     @BeforeEach
     public void init() {
-        assemblyStation = new AssemblyStationClient();
+        assemblyStation = AssemblyStationClient.getInstance();
         test = false;
     }
 
