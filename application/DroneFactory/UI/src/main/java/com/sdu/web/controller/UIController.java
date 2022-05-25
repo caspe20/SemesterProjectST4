@@ -23,7 +23,7 @@ public class UIController {
     private List<SseEmitter> emitters = new CopyOnWriteArrayList<>();
     private UIApplication app;
 
-    @RequestMapping(value = "/greeting")
+    @RequestMapping(value = "/")
     public String test(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
         model.addAttribute("name", name);
         return "greeting";

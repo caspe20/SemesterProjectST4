@@ -22,7 +22,7 @@
       <module name="DroneFactory" target="18" />
       <module name="serving-web-content" target="18" />
       <module name="UI" target="18" />
-      <module name="Warehouse" target="18" />
+      <module name="Warehouse" target="17" />
       <module name="wrapper" target="1.5" />
     </bytecodeTargetLevel>
   </component>
