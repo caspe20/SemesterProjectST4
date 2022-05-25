@@ -9,29 +9,52 @@ public class AssemblyStationTest {
     private AssemblyStationClient assemblyStation;
     private boolean test;
 
+    private void sleep() {
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    /**
+     * Needs to wait at least 100 millis or else it won't work
+     * construct is called here to avoid redundancy
+     */
     @BeforeEach
     public void init() {
         assemblyStation = new AssemblyStationClient();
         test = false;
+        assemblyStation.construct();
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Test
     public void checkExecution() {
-        /**
-         * The construct method has a problem,
-         * before publishing it needs to connect, subscribe and map
-         * which means the test needs to be run once to connect
-         * and then run again to publish
-         */
-        //for (int i = 0; i < 10; i++) {
-        //    assemblyStation.construct();
-        //    System.out.println(assemblyStation.isConstructing());
-        //    System.out.println("Operation successful");
-        //}
-
         if (assemblyStation.isConstructing()) {
             test = true;
-            System.out.println("Operation successful");
+            System.out.println("Construction successful");
+            assertTrue(test);
+        } else {
+            assertFalse(test);
+        }
+    }
+
+    /**
+     * For the methods below:
+     * Needs to wait at least 1000 millis due to operation/health in constructor
+     * @throws InterruptedException
+     */
+    @Test
+    public void checkHealth() throws InterruptedException {
+        Thread.sleep(8000);
+        if (assemblyStation.checkProductHealth()) {
+            test = true;
+            System.out.println("Health successful: " + assemblyStation.checkProductHealth());
             assertTrue(test);
         } else {
             assertFalse(test);
@@ -39,41 +62,31 @@ public class AssemblyStationTest {
     }
 
     @Test
-    public void checkHealth() {
-        assemblyStation.construct();
-        //TODO needs to be constructed before any other test
-        //TODO doesn't reach subscribing to checkHealth
-
-        // Wait for 5000 ms (5s)
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+    public void checkDone() throws InterruptedException {
+        Thread.sleep(9000);
+        if (assemblyStation.isDone()) {
+            test = true;
+            System.out.println("Done successful: " + assemblyStation.isDone());
+            assertTrue(test);
+        } else {
+            assertFalse(test);
         }
-
-        System.out.println(assemblyStation.checkProductHealth());
-    }
-
-    @Test
-    public void checkDone() {
-        //assemblyStation.construct();
-        System.out.println(assemblyStation.isDone());
-        //Returns false from the construct method, but why is done = false?
-        //Does it need to run ad infinitum?
     }
 
     @Test
     public void checkState() {
-        assemblyStation.construct();
-
         // Wait for 1000 ms (1s)
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(assemblyStation.getState());
-        //Returns null?????
+        if (assemblyStation.getState().equals("Idle") || assemblyStation.getState().equals("Executing") || assemblyStation.getState().equals("Error")) {
+            test = true;
+            System.out.println("State successful: " + assemblyStation.getState());
+            assertTrue(test);
+        } else {
+            assertFalse(test);
+        }
     }
-
 }

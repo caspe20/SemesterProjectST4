@@ -103,7 +103,5 @@ public class AssemblyStationClient implements IAssemblyStation {
         return state;
     }
 
-    public boolean isLastProductWasHealthy() {
-        return lastProductWasHealthy;
-    }
+
 }
