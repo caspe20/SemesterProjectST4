@@ -6,10 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/controller/UIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/resources/templates/greeting.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -102,7 +105,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.just run">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Core" />
@@ -122,10 +125,13 @@
     <configuration name="generated-requests#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests#6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="6" runType="Run single request">
+    <configuration name="generated-requests#7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests#7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" runType="Run single request">
+    <configuration name="generated-requests#8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="8" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#9" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="9" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -153,19 +159,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UIApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="UI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sdu.uiapp.app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sdu.uiapp.app.UIApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="dc up" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -180,18 +173,19 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="Docker.dc up" />
       <item itemvalue="HTTP Request.generated-requests#5" />
-      <item itemvalue="HTTP Request.generated-requests#6" />
       <item itemvalue="HTTP Request.generated-requests#7" />
+      <item itemvalue="HTTP Request.generated-requests#8" />
+      <item itemvalue="HTTP Request.generated-requests#9" />
       <item itemvalue="Spring Boot.UIApplication (1)" />
       <item itemvalue="Spring Boot.UIApplication (2)" />
-      <item itemvalue="Spring Boot.UIApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests#9" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="HTTP Request.generated-requests#8" />
         <item itemvalue="HTTP Request.generated-requests#5" />
         <item itemvalue="HTTP Request.generated-requests#7" />
-        <item itemvalue="HTTP Request.generated-requests#6" />
       </list>
     </recent_temporary>
   </component>
@@ -220,6 +214,8 @@
       <workItem from="1653206300889" duration="14262000" />
       <workItem from="1653249492246" duration="21000" />
       <workItem from="1653249533840" duration="171000" />
+      <workItem from="1653371356115" duration="2821000" />
+      <workItem from="1653458729302" duration="5865000" />
     </task>
     <servers />
   </component>

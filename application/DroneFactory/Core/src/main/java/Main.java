@@ -2,6 +2,9 @@ import Services.IAGV;
 import Services.IAssemblyStation;
 import Services.IUIService;
 import Services.IWarehouse;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -14,29 +17,33 @@ public class Main {
         context.scan("com.sdu");
         context.refresh();
 
-        for (IUIService ui : context.getBeansOfType(IUIService.class).values()){
-                ui.run(args);
-        }
+        IAGV agv;
+        IWarehouse warehouse;
+        IAssemblyStation assemblyStation;
+        IUIService ui;
 
-        System.out.println("test");
+        agv = context.getBean(IAGV.class);
+        warehouse = context.getBean(IWarehouse.class);
+        assemblyStation = context.getBean(IAssemblyStation.class);
+        ui = context.getBean(IUIService.class);
 
-        for (IAGV agv :
-                context.getBeansOfType(IAGV.class).values()) {
-            System.out.println("test2");
-            agv.getState();
-        }
+        ui.run(args);
 
-        for (IAssemblyStation assemblyStation :
-                context.getBeansOfType(IAssemblyStation.class).values()) {
-            System.out.println("test3");
-            assemblyStation.getState();
-        }
-
-        for (IWarehouse warehouse :
-                context.getBeansOfType(IWarehouse.class).values()) {
-            System.out.println("test4");
-            warehouse.getState();
-        }
+        // UI update
+        Thread t = new Thread(()->{
+            while(true){
+                try {
+                    String json = "";
+                    JSONObject obj = new JSONObject().put("test", 20);
+                    // Get update to ui
+                    ui.update(obj.toString());
+                    Thread.sleep(100);
+                } catch (InterruptedException | JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        t.start();
 
         try {
             Thread.sleep(20000);
