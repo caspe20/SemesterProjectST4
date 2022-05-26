@@ -24,6 +24,8 @@ public class AssemblyStationClient implements IAssemblyStation {
     private static AssemblyStationClient assemblyStationClient = null;
 
     private AssemblyStationClient() {
+        Thread thread = new Thread(new AssemblyStationPublisher(this));
+        thread.start();
 
         // Establish connection
         try {
@@ -70,19 +72,13 @@ public class AssemblyStationClient implements IAssemblyStation {
             throw new RuntimeException(e);
         }
 
-        Thread thread = new Thread(new AssemblyStationPublisher(this));
-        thread.start();
-
     }
-
 
     public static AssemblyStationClient getInstance()  {
         if (assemblyStationClient == null)
             assemblyStationClient = new AssemblyStationClient();
         return assemblyStationClient;
     }
-
-
 
     @Override
     public void construct() {

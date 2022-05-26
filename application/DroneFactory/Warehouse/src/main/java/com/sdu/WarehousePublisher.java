@@ -1,24 +1,20 @@
 package com.sdu;
 
 import events.AssemblyStationEvent;
+import helperclasses.HazelcastConnection;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.stereotype.Component;
 
 @Component
-public class WarehousePublisher implements Runnable, ApplicationEventPublisher { //, ApplicationEventPublisherAware {
+public class WarehousePublisher implements Runnable { //, ApplicationEventPublisherAware {
 
     private final WarehouseClient warehouseClient;
-    private final ApplicationEventPublisher publisher;
+    private final HazelcastConnection hazelcastConnection = new HazelcastConnection();
 
     public WarehousePublisher(WarehouseClient assemblyStationClient) {
         this.warehouseClient = assemblyStationClient;
-        this.publisher = new ApplicationEventPublisher() {
-            @Override
-            public void publishEvent(Object event) {
 
-            }
-        };
     }
 
     @Override
@@ -30,16 +26,16 @@ public class WarehousePublisher implements Runnable, ApplicationEventPublisher {
                 switch (state) {
                     case "Idle" -> {
                         AssemblyStationEvent idle = new AssemblyStationEvent(this, 1);
-                        publishEvent(idle);
-                        System.out.println("TEST");
+                        hazelcastConnection.publish(idle.getEventType().toString(), "Warehouse");
                     }
                     case "Executing" -> {
                         AssemblyStationEvent constructing = new AssemblyStationEvent(this, 2);
-                        publishEvent(constructing);
+                        hazelcastConnection.publish(constructing.getEventType().toString(), "Warehouse");
+
                     }
                     case "Error" -> {
                         AssemblyStationEvent error = new AssemblyStationEvent(this, 3);
-                        publishEvent(error);
+                        hazelcastConnection.publish(error.getEventType().toString(), "Warehouse");
                     }
                 }
 
@@ -50,13 +46,6 @@ public class WarehousePublisher implements Runnable, ApplicationEventPublisher {
         }
     }
 
-    @Override
-    public void publishEvent(Object event) {
 
-    }
 
-//    @Override
-//    public void setApplicationEventPublisher(ApplicationEventPublisher publisher) {
-//        this.publisher = publisher;
-//    }
 }

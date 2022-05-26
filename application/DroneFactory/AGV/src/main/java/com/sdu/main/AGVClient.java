@@ -1,46 +1,48 @@
 package com.sdu.main;
 
-import org.springframework.context.ApplicationEvent;
-import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import services.IAGV;
-import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.minidev.json.JSONObject;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.context.ApplicationEventPublisher;
-//import org.springframework.stereotype.Component;
-//import org.springframework.http.HttpStatus;
+
 
 import java.util.HashMap;
 
-@Service
-public class AGV implements IAGV {
+public class AGVClient implements IAGV {
 
     private final String resourceUrl = "http://localhost:8082/v1/status/";
     private final RestTemplate restTemplate = new RestTemplate();
-    private ResponseEntity<String> responseEntity = restTemplate.getForEntity(resourceUrl, String.class);
+    private ResponseEntity<String> responseEntity;
     private final ObjectMapper mapper = new ObjectMapper();
-    private final JsonNode root = mapper.readTree(responseEntity.getBody());
+    private JsonNode root;
 
-    public JsonNode getRoot() {
-        return root;
+    private static AGVClient agv = null;
+
+    private AGVClient() throws JsonProcessingException {
+
+        Thread t = new Thread(()->{
+            while(true) {
+                try {
+                    responseEntity = restTemplate.getForEntity(resourceUrl, String.class);
+                    root = mapper.readTree(responseEntity.getBody());
+
+                    Thread.sleep(100);
+                } catch (JsonProcessingException | InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        t.start();
     }
 
-    private static AGV agv = null;
 
-    private AGV() throws JsonProcessingException {
-        Thread thread = new Thread(new AGVEventPublisher(this));
-        thread.start();
-    }
 
-    public static AGV getInstance() throws JsonProcessingException {
+    public static AGVClient getInstance() throws JsonProcessingException {
         if (agv == null)
-            agv = new AGV();
+            agv = new AGVClient();
         return agv;
     }
 
@@ -50,7 +52,6 @@ public class AGV implements IAGV {
         executeTest.put("State", 2);
         restTemplate.put(resourceUrl, executeTest);
     }
-
 
     @Override
     public String getState() {
@@ -84,6 +85,7 @@ public class AGV implements IAGV {
 
     @Override
     public void pickUpPart() {
+        System.out.println("PICK UP PART");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PickWarehouseOperation");
         request.put("State", 1);
@@ -145,5 +147,6 @@ public class AGV implements IAGV {
         execute();
 
     }
+
 
 }

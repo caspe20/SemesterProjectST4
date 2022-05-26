@@ -5,43 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/events/AGVEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/events/AssemblyStationEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/events/ProductionEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/events/WarehouseEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/MESEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/Orchestrator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/helperclasses/HazelcastConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/src/main/java/HazelCastTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-tcplocalhost1883/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/AGV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/AGV.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGV/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/test/java/AssemblyStationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/test/java/AssemblyStationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Events/UpdateEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Services/IAGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/services/IAGV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Services/IAssemblyStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/services/IAssemblyStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Services/IPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/services/IPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Services/IUIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/services/IUIService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/Services/IWarehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/services/IWarehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/Common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/ReturnedEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/UpdateEventListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Warehouse/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/Warehouse.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/test/java/WarehouseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/test/java/WarehouseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +94,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/UI/src/main/java/com/sdu" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Common/src/main/java/Events" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/AGV/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.13769531" />
@@ -123,16 +109,19 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AGV/src/main/resources" />
       <recent name="$PROJECT_DIR$/Common/src/main/java/Events" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/AGV/src/main/resources/com/sdu/main" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\static\css" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\templates" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\resources\static" />
       <recent name="D:\Documents\gits\SDU\Softwareteknologi\SemesterProjectST4\application\DroneFactory\UI\src\main\java\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="helperclasses" />
       <recent name="com.sdu" />
       <recent name="com.sdu.main" />
       <recent name="" />
@@ -151,7 +140,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.HazelCastTester">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -163,8 +152,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AGV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sdu.main.AGV" />
+    <configuration name="AGV Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.sdu.main.Main" />
       <module name="AGV" />
       <extension name="coverage">
         <pattern>
@@ -176,9 +165,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AssemblyStationClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sdu.main.AssemblyStationClient" />
-      <module name="AssemblyStation" />
+    <configuration name="AGVClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sdu.main.AGVClient" />
+      <module name="AGV" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sdu.main.*" />
@@ -189,19 +178,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HazelCastTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HazelCastTester" />
+      <module name="Core" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Core" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="LaunchBrowser.Before.Run" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" url="localhost:8080/greeting" />
-      </method>
-    </configuration>
-    <configuration name="ProductionEventPublisherTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProductionEventPublisherTester" />
-      <module name="Core" />
-      <method v="2">
-        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="WarehouseClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -279,10 +268,10 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.AGV" />
-      <item itemvalue="Application.ProductionEventPublisherTester" />
-      <item itemvalue="Application.AssemblyStationClient" />
       <item itemvalue="Application.WarehouseClient" />
+      <item itemvalue="Application.HazelCastTester" />
+      <item itemvalue="Application.AGV Main" />
+      <item itemvalue="Application.AGVClient" />
       <item itemvalue="Docker.dc up" />
       <item itemvalue="Maven.clean install" />
       <item itemvalue="Spring Boot.UIApplication (2)" />
@@ -290,11 +279,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HazelCastTester" />
+        <item itemvalue="Application.AGV Main" />
+        <item itemvalue="Application.AGVClient" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.WarehouseClient" />
-        <item itemvalue="Application.AssemblyStationClient" />
-        <item itemvalue="Application.AGV" />
-        <item itemvalue="Application.ProductionEventPublisherTester" />
       </list>
     </recent_temporary>
   </component>
@@ -322,7 +311,9 @@
       <workItem from="1653308659049" duration="357000" />
       <workItem from="1653462698386" duration="6476000" />
       <workItem from="1653473193684" duration="17309000" />
-      <workItem from="1653497504400" duration="8336000" />
+      <workItem from="1653497504400" duration="11658000" />
+      <workItem from="1653509988684" duration="1848000" />
+      <workItem from="1653546415990" duration="9185000" />
     </task>
     <servers />
   </component>

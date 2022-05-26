@@ -1,37 +1,26 @@
 import com.fasterxml.jackson.core.JsonProcessingException;
-import org.junit.jupiter.api.*;
-import com.sdu.main.AGV;
+import com.sdu.main.AGVClient;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.sdu.main.AGV;
-import org.hibernate.query.criteria.internal.expression.function.CurrentTimestampFunction;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.client.RestTemplate;
-
-import java.text.SimpleDateFormat;
-import java.sql.Timestamp;
-import java.util.Date;
-
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 public class TestAGV {
 
-    private AGV agv;
+    private AGVClient agv;
     boolean test;
 
     //Det er denne Mette har kaldt "before()"
     @BeforeEach
     public void init() throws JsonProcessingException {
-        agv = AGV.getInstance();
+        agv = AGVClient.getInstance();
     }
 
     @Test
