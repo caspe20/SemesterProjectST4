@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 public class AssemblyStationEvent extends ApplicationEvent {
 
     public enum EventType{
+        WAITING(-1),
+
         STARTING(0),
 
         IDLE(1),

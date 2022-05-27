@@ -106,8 +106,10 @@ public class MESEventHandler {
                 currentProductionEvent = new ProductionEvent(this, 8);
             } else if (agvEventId == 7)
                 currentProductionEvent = new ProductionEvent(this, 9);
-            {
-        }
+
+            warehouseEventId = -1;
+            agvEventId = -1;
+            assemblyStationId = -1;
 
             System.out.println("Old production event: " + productionEvent.getEventType().toString());
             System.out.println("Current production event: " + currentProductionEvent.getEventType().toString());

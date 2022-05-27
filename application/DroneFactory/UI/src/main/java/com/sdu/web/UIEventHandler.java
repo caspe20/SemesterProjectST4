@@ -44,7 +44,7 @@ public class UIEventHandler {
             switch (system) {
                 case "MES" -> {
                     productionEvent = new ProductionEvent(this, state);
-                    System.out.println(system + ": " + productionEvent.getEventType());
+                    //System.out.println(system + ": " + productionEvent.getEventType());
                 }
                 case "Warehouse" -> {
                     warehouseEvent = new WarehouseEvent(this, state);

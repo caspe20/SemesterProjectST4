@@ -68,8 +68,6 @@ public class AGVEventPublisher implements Runnable {
                         case "PutWarehouseOperation" -> {
                             AGVEvent droneDelivered = new AGVEvent(this, 7);
                             hazelcastConnection.publish(droneDelivered.toString(), "Assets");
-//                            AGVEvent readyToPickUp = new AGVEvent(this, 1);
-//                            hazelcastConnection.publish(readyToPickUp.toString(), "Assets");
                         }
                     }
                 }
