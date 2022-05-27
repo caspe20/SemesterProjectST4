@@ -122,12 +122,12 @@
             // var warehouse = json["warehouse"]
             // var assemblystation = json["assemblystation"];
 
-            connectionStatusWH.html(json["warehouse"]["connection"].toLowerCase().replaceAll("_"," "))
-            connectionStatusAGV.html(json["agv"]["connection"].toLowerCase().replaceAll("_"," "))
-            connectionStatusAS.html(json["assemblystation"]["connection"].toLowerCase().replaceAll("_"," "))
-            machineStateWH.html(json["warehouse"]["state"].toLowerCase().replaceAll("_"," "))
-            machineStateAGV.html(json["agv"]["state"].toLowerCase().replaceAll("_"," "))
-            machineStateAS.html(json["assemblystation"]["state"].toLowerCase().replaceAll("_"," "))
+            connectionStatusWH.html(json["warehouse"]["connection"])
+            connectionStatusAGV.html(json["agv"]["connection"])
+            connectionStatusAS.html(json["assemblystation"]["connection"])
+            machineStateWH.html(json["warehouse"]["state"])
+            machineStateAGV.html(json["agv"]["state"])
+            machineStateAS.html(json["assemblystation"]["state"])
         })
 
         $("#startProductionPattern").on("click",function (e){
