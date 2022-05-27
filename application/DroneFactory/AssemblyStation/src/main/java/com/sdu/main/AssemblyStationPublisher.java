@@ -24,15 +24,15 @@ public class AssemblyStationPublisher implements Runnable { //, ApplicationEvent
                 String state = assemblyStationClient.getState();
                 switch (state) {
                     case "Idle" -> {
-                        AssemblyStationEvent idle = new AssemblyStationEvent(this, 1);
+                        AssemblyStationEvent idle = new AssemblyStationEvent(1);
                         hazelcastConnection.publish(idle.toString(), "Assets");
                     }
                     case "Executing" -> {
-                        AssemblyStationEvent constructing = new AssemblyStationEvent(this, 2);
+                        AssemblyStationEvent constructing = new AssemblyStationEvent(2);
                         hazelcastConnection.publish(constructing.toString(), "Assets");
                     }
                     case "Error" -> {
-                        AssemblyStationEvent error = new AssemblyStationEvent(this, 3);
+                        AssemblyStationEvent error = new AssemblyStationEvent(3);
                         hazelcastConnection.publish(error.toString(), "Assets");
                     }
                 }

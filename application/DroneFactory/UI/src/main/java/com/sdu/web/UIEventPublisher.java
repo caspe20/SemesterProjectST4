@@ -13,7 +13,7 @@ public class UIEventPublisher {
     }
 
     public void publish (String topic) {
-        UIEvent uiEvent = new UIEvent(this, 1);
+        UIEvent uiEvent = new UIEvent(1);
         hazelcastConnection.publish(uiEvent.toString(), topic);
     }
 

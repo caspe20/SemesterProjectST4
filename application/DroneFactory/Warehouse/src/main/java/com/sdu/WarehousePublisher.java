@@ -26,15 +26,15 @@ public class WarehousePublisher implements Runnable {
 
                 switch (state) {
                     case "Idle" -> {
-                        WarehouseEvent idle = new WarehouseEvent(this, 1);
+                        WarehouseEvent idle = new WarehouseEvent(1);
                         hazelcastConnection.publish(idle.toString(), "Assets");
                     }
                     case "Executing" -> {
-                        WarehouseEvent constructing = new WarehouseEvent(this, 2);
+                        WarehouseEvent constructing = new WarehouseEvent(2);
                         hazelcastConnection.publish(constructing.toString(), "Assets");
                     }
                     case "Error" -> {
-                        WarehouseEvent error = new WarehouseEvent(this, 3);
+                        WarehouseEvent error = new WarehouseEvent(3);
                         hazelcastConnection.publish(error.toString(), "Assets");
                     }
                 }

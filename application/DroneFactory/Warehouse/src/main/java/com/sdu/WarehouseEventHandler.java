@@ -23,7 +23,7 @@ public class WarehouseEventHandler {
     public WarehouseEventHandler(WarehouseClient warehouseClient, String topic)  {
         this.warehouseClient = warehouseClient;
         this.hazelcastConnection = new HazelcastConnection();
-        productionEvent = new ProductionEvent(this, 0);
+        productionEvent = new ProductionEvent(0);
         subscribe(topic);
     }
 
@@ -38,7 +38,7 @@ public class WarehouseEventHandler {
         public void onMessage(Message<String> m) {
             JsonObject jsonEvent = Json.parse(m.getMessageObject()).asObject();
             int state = jsonEvent.get("State").asInt();
-            ProductionEvent currentProductionEvent = new ProductionEvent(this, state);
+            ProductionEvent currentProductionEvent = new ProductionEvent(state);
 
             System.out.println();
             System.out.println("Old production event: " + productionEvent.getEventType().toString());
@@ -49,11 +49,9 @@ public class WarehouseEventHandler {
                 productionEvent = currentProductionEvent;
                 switch (currentProductionEvent.getEventType().toString()) {
                     case "READY_FOR_WAREHOUSE_TO_DISPENSE_PART" -> {
-                        System.out.println("!!!!!!!!!!!!!!");
                         warehouseClient.dispensePart(warehouseClient.getTrayIdNextPart());
                     }
                     case "READY_FOR_WAREHOUSE_TO_STORE_DRONE" -> {
-                        System.out.println("SIMON");
                         warehouseClient.insertDrone(warehouseClient.getTrayIdNextDrone());
                     }
                 }

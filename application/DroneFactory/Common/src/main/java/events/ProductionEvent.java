@@ -1,9 +1,8 @@
 package events;
 
 import com.hazelcast.internal.json.JsonObject;
-import org.springframework.context.ApplicationEvent;
 
-public class ProductionEvent extends ApplicationEvent {
+public class ProductionEvent {
 
     public enum EventType{
         STARTING(0),
@@ -41,8 +40,7 @@ public class ProductionEvent extends ApplicationEvent {
 
     private final EventType eventType;
 
-    public ProductionEvent(Object source, int eventId) {
-        super(source);
+    public ProductionEvent(int eventId) {
         this.eventType = EventType.getEventType(eventId);
     }
 

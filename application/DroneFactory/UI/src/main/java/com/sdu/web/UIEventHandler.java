@@ -48,24 +48,24 @@ public class UIEventHandler {
 
             switch (system) {
                 case "MES" -> {
-                    productionEvent = new ProductionEvent(this, state);
+                    productionEvent = new ProductionEvent(state);
                     obj.set("mes",new JsonObject().add("state",productionEvent.getEventType().toString()));
                     //System.out.println(system + ": " + productionEvent.getEventType());
                 }
                 case "Warehouse" -> {
-                    warehouseEvent = new WarehouseEvent(this, state);
+                    warehouseEvent = new WarehouseEvent(state);
                     obj.set("warehouse",new JsonObject().add("state",warehouseEvent.getEventType().toString()).add("connection","connected"));
                     System.out.println(system + ": " + warehouseEvent.getEventType());
                     sendToApplication(obj.toString());
                 }
                 case "AGV" -> {
-                    agvEvent = new AGVEvent(this, state);
+                    agvEvent = new AGVEvent(state);
                     System.out.println(system + ": " + agvEvent.getEventType());
                     obj.set("agv",new JsonObject().add("state",agvEvent.getEventType().toString()).add("connection","connected"));
                     sendToApplication(obj.toString());
                 }
                 case "Assembly Station" -> {
-                    assemblyStationEvent = new AssemblyStationEvent(this, state);
+                    assemblyStationEvent = new AssemblyStationEvent(state);
                     System.out.println(system + ": " + assemblyStationEvent.getEventType());
                     obj.set("assemblystation",new JsonObject().add("state",assemblyStationEvent.getEventType().toString()).add("connection","connected"));
                     sendToApplication(obj.toString());
