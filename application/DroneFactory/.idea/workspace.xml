@@ -5,30 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/1-tcplocalhost1883/.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/events/UIEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventPublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/test/java/AssemblyStationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/test/java/AssemblyStationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/AGVEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/AGVEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/AssemblyStationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/AssemblyStationEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/ProductionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/ProductionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/UIEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/UIEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/WarehouseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/WarehouseEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/HazelCastTester.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/MESEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/MESEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/test/java/WarehouseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/test/java/WarehouseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +37,10 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Core/src/main/java/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AGV/pom.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
