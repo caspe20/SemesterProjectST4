@@ -15,20 +15,17 @@ public class MESEventHandler {
     private AssemblyStationEvent assemblyStationEvent;
     private ProductionEvent productionEvent;
     private ProductionEvent currentProductionEvent;
-    private String[] eventSequence = new String[] {"AGVMoveToWarehouse","WarehouseDispenseItem"};
-
-    private int sequenceID = 0;
 
     private final HazelcastConnection hazelcastConnection;
 
     public MESEventHandler() {
         hazelcastConnection = new HazelcastConnection();
-        warehouseEvent = new WarehouseEvent(this, 0);
-        agvEvent = new AGVEvent(this, 0);
-        assemblyStationEvent = new AssemblyStationEvent(this, 0);
-        productionEvent = new ProductionEvent(this, 0);
-        currentProductionEvent = new ProductionEvent(this, 0);
-        uiEvent = new UIEvent(this, 0);
+        warehouseEvent = new WarehouseEvent(0);
+        agvEvent = new AGVEvent(0);
+        assemblyStationEvent = new AssemblyStationEvent(0);
+        productionEvent = new ProductionEvent(0);
+        currentProductionEvent = new ProductionEvent(0);
+        uiEvent = new UIEvent(0);
     }
 
     public void subscribe(String topicName) {
@@ -49,22 +46,22 @@ public class MESEventHandler {
 
             switch (system) {
                 case "Warehouse" -> {
-                    warehouseEvent = new WarehouseEvent(this, state);
+                    warehouseEvent = new WarehouseEvent(state);
                     System.out.println("Warehouse: " + warehouseEvent.getEventType().toString());
                     setProductionEvent();
                 }
                 case "AGV" -> {
-                    agvEvent = new AGVEvent(this, state);
+                    agvEvent = new AGVEvent(state);
                     System.out.println("AGV: " + agvEvent.getEventType().toString());
                     setProductionEvent();
                 }
                 case "Assembly Station" -> {
-                    assemblyStationEvent = new AssemblyStationEvent(this, state);
+                    assemblyStationEvent = new AssemblyStationEvent(state);
                     System.out.println("Assembly Station: " + assemblyStationEvent.getEventType().toString());
                     setProductionEvent();
                 }
                 case "UI" -> {
-                    uiEvent = new UIEvent(this, state);
+                    uiEvent = new UIEvent(state);
                     System.out.println("UI: " + uiEvent.getEventType().toString());
                     setProductionEvent();
                 }
@@ -83,29 +80,27 @@ public class MESEventHandler {
 
 
 
-            currentProductionEvent = new ProductionEvent(this,sequenceID++);
-
             // If Warehouse is IDLE, AGC is READY_TO_PICK_UP, Assembly Station is IDLE
             if (warehouseEventId == 1 && agvEventId == 1 && assemblyStationId == 1) {
                 // Sets current production event to READY_FOR_WAREHOUSE_TO_DISPENSE_PART
-                currentProductionEvent = new ProductionEvent(this, 1);
+                currentProductionEvent = new ProductionEvent(1);
             // If Warehouse is IDLE and AGV is READY_TO_PICK_UP
             } else if (warehouseEventId == 1 && agvEventId == 1) {
-                currentProductionEvent = new ProductionEvent(this, 2);
+                currentProductionEvent = new ProductionEvent(2);
             } else if (agvEventId == 2) {
-                currentProductionEvent = new ProductionEvent(this, 3);
+                currentProductionEvent = new ProductionEvent(3);
             } else if (agvEventId == 3 && assemblyStationId == 1) {
-                currentProductionEvent = new ProductionEvent(this, 4);
+                currentProductionEvent = new ProductionEvent(4);
             } else if (agvEventId == 4 && assemblyStationId == 1) {
-                currentProductionEvent = new ProductionEvent(this, 5);
+                currentProductionEvent = new ProductionEvent(5);
             } else if (agvEventId == 111 && assemblyStationId == 1) {
-                currentProductionEvent = new ProductionEvent(this, 6);
+                currentProductionEvent = new ProductionEvent(6);
             } else if (agvEventId == 5) {
-                currentProductionEvent = new ProductionEvent(this, 7);
+                currentProductionEvent = new ProductionEvent(7);
             } else if (agvEventId == 6 && warehouseEventId == 1) {
-                currentProductionEvent = new ProductionEvent(this, 8);
+                currentProductionEvent = new ProductionEvent(8);
             } else if (agvEventId == 7)
-                currentProductionEvent = new ProductionEvent(this, 9);
+                currentProductionEvent = new ProductionEvent(9);
 
             warehouseEventId = -1;
             agvEventId = -1;

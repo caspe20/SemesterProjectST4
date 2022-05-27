@@ -29,12 +29,12 @@ public class AGVEventPublisher implements Runnable {
 
 
                 if(state.equals("1") && batteryLevel < 20) {
-                    AGVEvent batteryLevelLow = new AGVEvent(this, 98);
+                    AGVEvent batteryLevelLow = new AGVEvent(98);
                     hazelcastConnection.publish(batteryLevelLow.toString(), "Assets");
                 }
 
                 if(state.equals("1") && programName.equals("no program loaded")) {
-                    AGVEvent readyToPickUp = new AGVEvent(this, 1);
+                    AGVEvent readyToPickUp = new AGVEvent(1);
                     hazelcastConnection.publish(readyToPickUp.toString(), "Assets");
                 }
 
@@ -42,31 +42,31 @@ public class AGVEventPublisher implements Runnable {
                     switch (programName) {
                         case "PickWarehouseOperation" -> {
                             System.out.println("Before");
-                            AGVEvent partPickedUp = new AGVEvent(this, 2);
+                            AGVEvent partPickedUp = new AGVEvent(2);
                             hazelcastConnection.publish(partPickedUp.toString(), "Assets");
                             System.out.println("After");
                         }
                         case "MoveToAssemblyOperation" -> {
-                            AGVEvent partMovedToAssemblyStation = new AGVEvent(this, 3);
+                            AGVEvent partMovedToAssemblyStation = new AGVEvent(3);
                             hazelcastConnection.publish(partMovedToAssemblyStation.toString(), "Assets");
                         }
                         case "PutAssemblyOperation" -> {
-                            AGVEvent partDelivered = new AGVEvent(this, 4);
+                            AGVEvent partDelivered = new AGVEvent(4);
                             hazelcastConnection.publish(partDelivered.toString(), "Assets");
                             Thread.sleep(2000);
-                            AGVEvent readyToPickUpDrone = new AGVEvent(this, 111);
+                            AGVEvent readyToPickUpDrone = new AGVEvent(111);
                             hazelcastConnection.publish(readyToPickUpDrone.toString(), "Assets");
                         }
                         case "PickAssemblyOperation" -> {
-                            AGVEvent dronePickedUp = new AGVEvent(this, 5);
+                            AGVEvent dronePickedUp = new AGVEvent(5);
                             hazelcastConnection.publish(dronePickedUp.toString(), "Assets");
                         }
                         case "MoveToStorageOperation" -> {
-                            AGVEvent droneMovedToWarehouse = new AGVEvent(this, 6);
+                            AGVEvent droneMovedToWarehouse = new AGVEvent(6);
                             hazelcastConnection.publish(droneMovedToWarehouse.toString(), "Assets");
                         }
                         case "PutWarehouseOperation" -> {
-                            AGVEvent droneDelivered = new AGVEvent(this, 7);
+                            AGVEvent droneDelivered = new AGVEvent(7);
                             hazelcastConnection.publish(droneDelivered.toString(), "Assets");
                         }
                     }
@@ -75,34 +75,34 @@ public class AGVEventPublisher implements Runnable {
                 if (state.equals("2")) {
                     switch (programName) {
                         case "PickWarehouseOperation" -> {
-                            AGVEvent pickingUpPart = new AGVEvent(this, 8);
+                            AGVEvent pickingUpPart = new AGVEvent(8);
                             hazelcastConnection.publish(pickingUpPart.toString(), "Assets");
                         }
                         case "MoveToAssemblyOperation" -> {
-                            AGVEvent movingToAssemblyStation = new AGVEvent(this, 9);
+                            AGVEvent movingToAssemblyStation = new AGVEvent(9);
                             hazelcastConnection.publish(movingToAssemblyStation.toString(), "Assets");
                         }
                         case "PutAssemblyOperation" -> {
-                            AGVEvent deliveringPart = new AGVEvent(this, 10);
+                            AGVEvent deliveringPart = new AGVEvent(10);
                             hazelcastConnection.publish(deliveringPart.toString(), "Assets");
                         }
                         case "PickAssemblyOperation" -> {
-                            AGVEvent pickingUpDrone = new AGVEvent(this, 11);
+                            AGVEvent pickingUpDrone = new AGVEvent(11);
                             hazelcastConnection.publish(pickingUpDrone.toString(), "Assets");
                         }
                         case "MoveToStorageOperation" -> {
-                            AGVEvent movingToWarehouse = new AGVEvent(this, 12);
+                            AGVEvent movingToWarehouse = new AGVEvent(12);
                             hazelcastConnection.publish(movingToWarehouse.toString(), "Assets");
                         }
                         case "PutWarehouseOperation" -> {
-                            AGVEvent deliveringDrone = new AGVEvent(this, 13);
+                            AGVEvent deliveringDrone = new AGVEvent(13);
                             hazelcastConnection.publish(deliveringDrone.toString(), "Assets");
                         }
                     }
                 }
 
                 if (state.equals("3")) {
-                    AGVEvent charging = new AGVEvent(this, 99);
+                    AGVEvent charging = new AGVEvent(99);
                     hazelcastConnection.publish(charging.toString(), "Assets");
                 }
 

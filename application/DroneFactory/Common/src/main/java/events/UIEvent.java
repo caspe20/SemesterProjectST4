@@ -2,10 +2,8 @@ package events;
 
 import com.hazelcast.internal.json.JsonObject;
 import org.springframework.context.ApplicationEvent;
-import org.springframework.stereotype.Component;
 
-@Component
-public class UIEvent extends ApplicationEvent {
+public class UIEvent  {
 
     public enum EventType{
         WAITING(-1),
@@ -36,8 +34,7 @@ public class UIEvent extends ApplicationEvent {
 
     private final EventType eventType;
 
-    public UIEvent(Object source, int eventId) {
-        super(source);
+    public UIEvent(int eventId) {
         this.eventType = EventType.getEventType(eventId);
     }
 

@@ -2,11 +2,8 @@ package events;
 
 import com.hazelcast.internal.json.JsonObject;
 import org.springframework.context.ApplicationEvent;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 
-@Component
-public class AGVEvent extends ApplicationEvent {
+public class AGVEvent {
 
     public enum EventType{
         WAITING(-1),
@@ -51,22 +48,11 @@ public class AGVEvent extends ApplicationEvent {
             }
             return null;
         }
-
-        public static EventType getEventType(String name) {
-            for (EventType event: EventType.values()) {
-                if(event.toString() == name) {
-                    return event;
-                }
-            }
-            return null;
-        }
-
     }
 
     private final EventType eventType;
 
-    public AGVEvent(Object source, int eventId) {
-        super(source);
+    public AGVEvent(int eventId) {
         this.eventType = EventType.getEventType(eventId);
     }
 

@@ -22,7 +22,7 @@ public class AssemblyStationEventHandler {
     public AssemblyStationEventHandler(AssemblyStationClient client, String topic)  {
         this.assemblyStationClient = client;
         this.hazelcastConnection = new HazelcastConnection();
-        productionEvent = new ProductionEvent(this, 0);
+        productionEvent = new ProductionEvent(0);
 
         subscribe(topic);
     }
@@ -38,7 +38,7 @@ public class AssemblyStationEventHandler {
         public void onMessage(Message<String> m) {
             JsonObject jsonEvent = Json.parse(m.getMessageObject()).asObject();
             int state = jsonEvent.get("State").asInt();
-            ProductionEvent currentProductionEvent = new ProductionEvent(this, state);
+            ProductionEvent currentProductionEvent = new ProductionEvent(state);
 
             System.out.println();
             System.out.println("Old production event: " + productionEvent.getEventType().toString());

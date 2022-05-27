@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationEvent;
 import org.springframework.stereotype.Component;
 
 @Component
-public class WarehouseEvent extends ApplicationEvent {
+public class WarehouseEvent {
 
     public enum EventType{
         WAITING(-1),
@@ -39,8 +39,7 @@ public class WarehouseEvent extends ApplicationEvent {
 
     private final EventType eventType;
 
-    public WarehouseEvent(Object source, int eventId) {
-        super(source);
+    public WarehouseEvent(int eventId) {
         this.eventType = EventType.getEventType(eventId);
     }
 
