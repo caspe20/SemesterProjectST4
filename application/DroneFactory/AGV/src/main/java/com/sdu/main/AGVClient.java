@@ -1,32 +1,42 @@
 package com.sdu.main;
 
-import Services.IAGV;
-import org.springframework.stereotype.Service;
+import services.IAGV;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import net.minidev.json.JSONObject;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.context.ApplicationEventPublisher;
-//import org.springframework.stereotype.Component;
-//import org.springframework.http.HttpStatus;
+
 
 import java.util.HashMap;
 
-@Service
-public class AGV implements IAGV {
-
-    public AGV() throws JsonProcessingException {
-
-    }
+public class AGVClient implements IAGV {
 
     private final String resourceUrl = "http://localhost:8082/v1/status/";
     private final RestTemplate restTemplate = new RestTemplate();
-    private ResponseEntity<String> responseEntity = restTemplate.getForEntity(resourceUrl, String.class);
     private final ObjectMapper mapper = new ObjectMapper();
-    private final JsonNode root = mapper.readTree(responseEntity.getBody());
+    private ResponseEntity<String> responseEntity;
+    private JsonNode root;
+
+    public AGVClient() throws JsonProcessingException {
+        Thread t = new Thread(()->{
+            while(true) {
+                try {
+                    responseEntity = restTemplate.getForEntity(resourceUrl, String.class);
+                    root = mapper.readTree(responseEntity.getBody());
+
+                    Thread.sleep(100);
+                } catch (JsonProcessingException | InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        t.start();
+        Thread agvPublisherThread = new Thread(new AGVEventPublisher(this));
+        agvPublisherThread.start();
+        AGVEventHandler agvEventHandler = new AGVEventHandler(this, "MES");
+    }
 
     //Execute method - OBS is needed for every method
     public void execute() {
@@ -34,7 +44,6 @@ public class AGV implements IAGV {
         executeTest.put("State", 2);
         restTemplate.put(resourceUrl, executeTest);
     }
-
 
     @Override
     public String getState() {
@@ -68,6 +77,7 @@ public class AGV implements IAGV {
 
     @Override
     public void pickUpPart() {
+        System.out.println("\npicking up part\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PickWarehouseOperation");
         request.put("State", 1);
@@ -77,6 +87,7 @@ public class AGV implements IAGV {
 
     @Override
     public void pickUpDrone() {
+        System.out.println("\npicking up drone\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PickAssemblyOperation");
         request.put("State", 1);
@@ -86,6 +97,7 @@ public class AGV implements IAGV {
 
     @Override
     public void putDownPart() {
+        System.out.println("\nputting down part\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PutAssemblyOperation");
         request.put("State", 1);
@@ -95,6 +107,7 @@ public class AGV implements IAGV {
 
     @Override
     public void putDownDrone() {
+        System.out.println("\nputting down drone\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PutWarehouseOperation");
         request.put("State", 1);
@@ -104,6 +117,7 @@ public class AGV implements IAGV {
 
     @Override
     public void goToAssembly() {
+        System.out.println("\nmoving to assembly\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "MoveToAssemblyOperation");
         request.put("State", 1);
@@ -113,6 +127,7 @@ public class AGV implements IAGV {
 
     @Override
     public void goToWarehouse() {
+        System.out.println("\nmoving to warehouse\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "MoveToStorageOperation");
         request.put("State", 1);
@@ -129,5 +144,10 @@ public class AGV implements IAGV {
         execute();
 
     }
+
+    public static void main(String[] args) throws JsonProcessingException {
+        AGVClient agvClient = new AGVClient();
+    }
+
 
 }

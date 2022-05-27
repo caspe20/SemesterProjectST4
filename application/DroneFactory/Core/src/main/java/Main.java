@@ -1,55 +1,61 @@
-import Services.IAGV;
-import Services.IAssemblyStation;
-import Services.IUIService;
-import Services.IWarehouse;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.springframework.boot.SpringApplication;
+import org.springframework.context.ApplicationEventPublisherAware;
+import services.IAGV;
+import services.IAssemblyStation;
+import services.IUIService;
+import services.IWarehouse;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 
         context.scan("com.sdu");
         context.refresh();
 
-        IAGV agv;
-        IWarehouse warehouse;
-        IAssemblyStation assemblyStation;
-        IUIService ui;
 
-        agv = context.getBean(IAGV.class);
-        warehouse = context.getBean(IWarehouse.class);
-        assemblyStation = context.getBean(IAssemblyStation.class);
-        ui = context.getBean(IUIService.class);
+//        IUIService iuiService = context.getBean(IUIService.class);
+//        IAGV agv = context.getBean(IAGV.class);
+//        IAssemblyStation assemblyStation = context.getBean(IAssemblyStation.class);
+//        IWarehouse warehouse = context.getBean(IWarehouse.class);
 
-        ui.run(args);
+       // Thread.sleep(2000);
 
-        // UI update
-        Thread t = new Thread(()->{
-            while(true){
-                try {
-                    String json = "";
-                    JSONObject obj = new JSONObject().put("test", 20);
-                    // Get update to ui
-                    ui.update(obj.toString());
-                    Thread.sleep(100);
-                } catch (InterruptedException | JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        t.start();
 
-        try {
-            Thread.sleep(20000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+
+//        for (IAssemblyStation assemblyStation :
+//                context.getBeansOfType(IAssemblyStation.class).values()) {
+//            assemblyStation.construct();
+//            try {
+//                Thread.sleep(100);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println("Assembly Station: " + assemblyStation.getState());
+//        }
+//
+//        for (IAGV agv :
+//                context.getBeansOfType(IAGV.class).values()) {
+//            System.out.println("AGV: " + agv.getState());
+//        }
+//
+//        for (IWarehouse warehouse :
+//                context.getBeansOfType(IWarehouse.class).values()) {
+//            System.out.println("Warehouse: " + warehouse.getState());
+//        }
+//
+//        try {
+//            Thread.sleep(20000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+
+
+
+
+
+
     }
-
 }

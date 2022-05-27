@@ -18,3 +18,7 @@ services:
     environment:
       MQTT_TCP_CONNECTION_HOST: "mqtt"
       MQTT_TCP_CONNECTION_PORT: 1883
+  hazelcast:
+    image: hazelcast/hazelcast
+    ports:
+      - 5701:5701
