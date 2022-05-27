@@ -1,5 +1,6 @@
 package com.sdu.web;
 
+import com.sdu.web.controller.UIController;
 import services.IUIService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,12 +14,14 @@ import org.springframework.stereotype.Service;
 public class UIApplication implements IUIService {
 
     ApplicationContext webApplicationContext;
+    private UIEventPublisher publisher;
 
     @Override
     public void run(String[] args) {
         webApplicationContext = SpringApplication.run(UIApplication.class,args);
         UIController controller = webApplicationContext.getBean(UIController.class);
         controller.setGateway(this);
+        publisher = new UIEventPublisher();
     }
 
     @Override
@@ -29,7 +32,14 @@ public class UIApplication implements IUIService {
     }
 
     public void startProduction() {
-        // publish event here for starting production.
-        System.out.println("Yes my dear, it does indeed work!");
+        publisher.publish("UI");
+    }
+
+    public static void main(String[] args) {
+        UIApplication app = new UIApplication();
+        app.run(args);
+
+        UIEventHandler uiEventHandlerMES = new UIEventHandler("MES",app);
+        UIEventHandler uiEventHandlerAssets = new UIEventHandler("Assets",app);
     }
 }

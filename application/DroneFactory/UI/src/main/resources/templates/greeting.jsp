@@ -106,11 +106,6 @@
 </style>
 <script>
     $(document).ready(function () {
-
-        var currentOperationWH = $("#COWH")
-        var currentOperationagv = $("#COAGV")
-        var currentOperationas = $("#COAS")
-
         var connectionStatusWH= $("#CNWH")
         var connectionStatusAGV= $("#CNAGV")
         var connectionStatusAS = $("#CNAS")
@@ -118,8 +113,6 @@
         var machineStateWH = $("#MSWH")
         var machineStateAGV = $("#MSAGV")
         var machineStateAS = $("#MSAS")
-
-
 
         var url = "http://localhost:8080/sse";
         var listener = new EventSource(url)
@@ -129,17 +122,12 @@
             // var warehouse = json["warehouse"]
             // var assemblystation = json["assemblystation"];
 
-
-            console.log(json["test"])
-            currentOperationWH.text(json["test"])
-            currentOperationagv.html(e)
-            currentOperationas.html(e)
-            connectionStatusWH.html(e)
-            connectionStatusAGV.html(e)
-            connectionStatusAS.html(e)
-            machineStateWH.html(e)
-            machineStateAGV.html(e)
-            machineStateAS.html(e)
+            connectionStatusWH.html(json["warehouse"]["connection"].toLowerCase().replaceAll("_"," "))
+            connectionStatusAGV.html(json["agv"]["connection"].toLowerCase().replaceAll("_"," "))
+            connectionStatusAS.html(json["assemblystation"]["connection"].toLowerCase().replaceAll("_"," "))
+            machineStateWH.html(json["warehouse"]["state"].toLowerCase().replaceAll("_"," "))
+            machineStateAGV.html(json["agv"]["state"].toLowerCase().replaceAll("_"," "))
+            machineStateAS.html(json["assemblystation"]["state"].toLowerCase().replaceAll("_"," "))
         })
 
         $("#startProductionPattern").on("click",function (e){
@@ -168,15 +156,11 @@ numbers represent the cell number -->
     <div class="grid-item-agv">AGV</div>
     <div class="grid-item-assembly">Assembly Station</div>
     <div class="grid-item">Connection Status:</div>
-    <div id="CNWH" class="grid-item">7</div>
-    <div id="CNAGV" class="grid-item">8</div>
-    <div id="CNAS" class="grid-item">9</div>
+    <div id="CNWH" class="grid-item">disconnected</div>
+    <div id="CNAGV" class="grid-item">disconnected</div>
+    <div id="CNAS" class="grid-item">disconnected</div>
     <div class="grid-item">Machine State:</div>
-    <div id="MSWH" class="grid-item">11</div>
-    <div id="MSAGV" class="grid-item">12</div>
-    <div id="MSAS" class="grid-item">13</div>
-    <div class="grid-item">Current Operation:</div>
-    <div id="COWH" class="grid-item">15</div>
-    <div id="COAGV" class="grid-item">16</div>
-    <div id="COAS" class="grid-item">17</div>
+    <div id="MSWH" class="grid-item">none</div>
+    <div id="MSAGV" class="grid-item">none</div>
+    <div id="MSAS" class="grid-item">none</div>
 </div>
