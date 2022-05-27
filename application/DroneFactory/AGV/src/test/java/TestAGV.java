@@ -20,7 +20,7 @@ public class TestAGV {
     //Det er denne Mette har kaldt "before()"
     @BeforeEach
     public void init() throws JsonProcessingException {
-        agv = AGVClient.getInstance();
+        agv = new AGVClient();
     }
 
     @Test

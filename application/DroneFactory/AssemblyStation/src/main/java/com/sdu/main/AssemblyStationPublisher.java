@@ -9,11 +9,12 @@ import org.springframework.stereotype.Component;
 
 public class AssemblyStationPublisher implements Runnable { //, ApplicationEventPublisherAware {
 
+    private final HazelcastConnection hazelcastConnection;
     private final AssemblyStationClient assemblyStationClient;
-    private final HazelcastConnection hazelcastConnection = new HazelcastConnection();
 
     public AssemblyStationPublisher(AssemblyStationClient assemblyStationClient) {
         this.assemblyStationClient = assemblyStationClient;
+        this.hazelcastConnection = new HazelcastConnection();
     }
 
     @Override
@@ -24,19 +25,19 @@ public class AssemblyStationPublisher implements Runnable { //, ApplicationEvent
                 switch (state) {
                     case "Idle" -> {
                         AssemblyStationEvent idle = new AssemblyStationEvent(this, 1);
-                        hazelcastConnection.publish(idle.getEventType().toString(), "Assembly Station");
+                        hazelcastConnection.publish(idle.toString(), "Assets");
                     }
                     case "Executing" -> {
                         AssemblyStationEvent constructing = new AssemblyStationEvent(this, 2);
-                        hazelcastConnection.publish(constructing.getEventType().toString(), "Assembly Station");
+                        hazelcastConnection.publish(constructing.toString(), "Assets");
                     }
                     case "Error" -> {
                         AssemblyStationEvent error = new AssemblyStationEvent(this, 3);
-                        hazelcastConnection.publish(error.getEventType().toString(), "Assembly Station");
+                        hazelcastConnection.publish(error.toString(), "Assets");
                     }
                 }
 
-                Thread.sleep(2000);
+                Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -5,29 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/main/java/helperclasses/HazelcastConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/src/main/java/HazelCastTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-tcplocalhost1883/.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/main/java/events/UIEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventPublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/AGV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/AGV.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/test/java/TestAGV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/AssemblyStation.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/Common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/Common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/Warehouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/Warehouse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/test/java/AssemblyStationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/test/java/AssemblyStationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/AGVEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/AGVEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/AssemblyStationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/AssemblyStationEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/ProductionEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/ProductionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/WarehouseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/WarehouseEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/HazelCastTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/src/main/java/MESEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/MESEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/test/java/WarehouseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/test/java/WarehouseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +141,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.HazelCastTester">
+  <component name="RunManager" selected="Application.AGVClient">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -152,20 +153,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AGV Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.sdu.main.Main" />
-      <module name="AGV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sdu.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AGVClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="AGVClient" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sdu.main.AGVClient" />
       <module name="AGV" />
       <extension name="coverage">
@@ -178,22 +166,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HazelCastTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HazelCastTester" />
+    <configuration name="AssemblyStationClient" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sdu.main.AssemblyStationClient" />
+      <module name="AssemblyStation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sdu.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MESEventHandler" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MESEventHandler" />
       <module name="Core" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Core" />
+    <configuration name="UIEventPublisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sdu.web.UIEventPublisher" />
+      <module name="UI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sdu.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="LaunchBrowser.Before.Run" browser="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" url="localhost:8080/greeting" />
       </method>
     </configuration>
-    <configuration name="WarehouseClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="WarehouseClient" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sdu.WarehouseClient" />
       <module name="Warehouse" />
       <extension name="coverage">
@@ -243,47 +249,17 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="UIApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="UI" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sdu.uiapp.app.UIApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UIApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="UI" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sdu.web.UIApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="dc up" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="envFilePath" value="" />
-          <option name="sourceFilePath" value="../../docker/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.WarehouseClient" />
-      <item itemvalue="Application.HazelCastTester" />
-      <item itemvalue="Application.AGV Main" />
       <item itemvalue="Application.AGVClient" />
-      <item itemvalue="Docker.dc up" />
+      <item itemvalue="Application.MESEventHandler" />
+      <item itemvalue="Application.AssemblyStationClient" />
+      <item itemvalue="Application.WarehouseClient" />
+      <item itemvalue="Application.UIEventPublisher" />
       <item itemvalue="Maven.clean install" />
-      <item itemvalue="Spring Boot.UIApplication (2)" />
-      <item itemvalue="Spring Boot.UIApplication (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HazelCastTester" />
-        <item itemvalue="Application.AGV Main" />
-        <item itemvalue="Application.AGVClient" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.WarehouseClient" />
+        <item itemvalue="Application.UIEventPublisher" />
       </list>
     </recent_temporary>
   </component>
@@ -314,6 +290,11 @@
       <workItem from="1653497504400" duration="11658000" />
       <workItem from="1653509988684" duration="1848000" />
       <workItem from="1653546415990" duration="9185000" />
+      <workItem from="1653557484205" duration="12375000" />
+      <workItem from="1653572221882" duration="7173000" />
+      <workItem from="1653584195327" duration="2103000" />
+      <workItem from="1653634038223" duration="9345000" />
+      <workItem from="1653643767602" duration="1835000" />
     </task>
     <servers />
   </component>

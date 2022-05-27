@@ -1,20 +1,21 @@
 package com.sdu;
 
 import events.AssemblyStationEvent;
+import events.WarehouseEvent;
 import helperclasses.HazelcastConnection;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.stereotype.Component;
 
 @Component
-public class WarehousePublisher implements Runnable { //, ApplicationEventPublisherAware {
+public class WarehousePublisher implements Runnable {
 
+    private final HazelcastConnection hazelcastConnection;
     private final WarehouseClient warehouseClient;
-    private final HazelcastConnection hazelcastConnection = new HazelcastConnection();
 
-    public WarehousePublisher(WarehouseClient assemblyStationClient) {
-        this.warehouseClient = assemblyStationClient;
-
+    public WarehousePublisher(WarehouseClient warehouseClient) {
+        this.warehouseClient = warehouseClient;
+        this.hazelcastConnection = new HazelcastConnection();
     }
 
     @Override
@@ -25,21 +26,20 @@ public class WarehousePublisher implements Runnable { //, ApplicationEventPublis
 
                 switch (state) {
                     case "Idle" -> {
-                        AssemblyStationEvent idle = new AssemblyStationEvent(this, 1);
-                        hazelcastConnection.publish(idle.getEventType().toString(), "Warehouse");
+                        WarehouseEvent idle = new WarehouseEvent(this, 1);
+                        hazelcastConnection.publish(idle.toString(), "Assets");
                     }
                     case "Executing" -> {
-                        AssemblyStationEvent constructing = new AssemblyStationEvent(this, 2);
-                        hazelcastConnection.publish(constructing.getEventType().toString(), "Warehouse");
-
+                        WarehouseEvent constructing = new WarehouseEvent(this, 2);
+                        hazelcastConnection.publish(constructing.toString(), "Assets");
                     }
                     case "Error" -> {
-                        AssemblyStationEvent error = new AssemblyStationEvent(this, 3);
-                        hazelcastConnection.publish(error.getEventType().toString(), "Warehouse");
+                        WarehouseEvent error = new WarehouseEvent(this, 3);
+                        hazelcastConnection.publish(error.toString(), "Assets");
                     }
                 }
 
-                Thread.sleep(2000);
+                Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

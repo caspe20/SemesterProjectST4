@@ -1,5 +1,6 @@
 package events;
 
+import com.hazelcast.internal.json.JsonObject;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.stereotype.Component;
 
@@ -43,5 +44,13 @@ public class AssemblyStationEvent extends ApplicationEvent {
 
     public EventType getEventType() {
         return eventType;
+    }
+
+    @Override
+    public String toString() {
+        JsonObject jsonEvent = new JsonObject();
+        jsonEvent.add("System", "Assembly Station");
+        jsonEvent.add("State", getEventType().getEventId());
+        return jsonEvent.toString();
     }
 }
