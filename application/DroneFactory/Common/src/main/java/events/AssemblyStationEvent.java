@@ -1,20 +1,14 @@
 package events;
 
 import com.hazelcast.internal.json.JsonObject;
-import org.springframework.context.ApplicationEvent;
-import org.springframework.stereotype.Component;
 
 public class AssemblyStationEvent {
-
     public enum EventType{
         WAITING(-1),
-
         STARTING(0),
-
         IDLE(1),
         CONSTRUCTING(2),
-        ERROR(3),
-        ;
+        ERROR(3);
 
         private final int eventId;
 

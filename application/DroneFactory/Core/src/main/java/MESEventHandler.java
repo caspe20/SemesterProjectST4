@@ -42,8 +42,6 @@ public class MESEventHandler {
             String system = jsonEvent.get("System").asString().replace("\"", "");
             int state = jsonEvent.get("State").asInt();
 
-            System.out.println();
-
             switch (system) {
                 case "Warehouse" -> {
                     warehouseEvent = new WarehouseEvent(state);
@@ -75,31 +73,52 @@ public class MESEventHandler {
         int assemblyStationId = assemblyStationEvent.getEventType().getEventId();
         int uiId = uiEvent.getEventType().getEventId();
 
-        // If UI sends start event
+        // UI = START_PRODUCTION
         if (uiId == 1) {
 
-
-
-            // If Warehouse is IDLE, AGC is READY_TO_PICK_UP, Assembly Station is IDLE
+            // Warehouse = IDLE, AGV = READY_TO_PICK_UP, Assembly Station = IDLE
             if (warehouseEventId == 1 && agvEventId == 1 && assemblyStationId == 1) {
-                // Sets current production event to READY_FOR_WAREHOUSE_TO_DISPENSE_PART
+                // READY_FOR_WAREHOUSE_TO_DISPENSE_PART
                 currentProductionEvent = new ProductionEvent(1);
-            // If Warehouse is IDLE and AGV is READY_TO_PICK_UP
+
+            // Warehouse = IDLE, AGV = READY_TO_PICK_UP
             } else if (warehouseEventId == 1 && agvEventId == 1) {
+                // READY_FOR_AGV_TO_PICK_UP_PART
                 currentProductionEvent = new ProductionEvent(2);
+
+            // AGV = PART_PICKED_UP
             } else if (agvEventId == 2) {
+                // READY_FOR_AGV_TO_MOVE_PART_TO_ASSEMBLY_STATION
                 currentProductionEvent = new ProductionEvent(3);
+
+            // AGV = PART_MOVED_TO_ASSEMBLY_STATION, Assembly Station = IDLE
             } else if (agvEventId == 3 && assemblyStationId == 1) {
+                // READY_FOR_AGV_TO_DELIVER_PART_TO_ASSEMBLY_STATION
                 currentProductionEvent = new ProductionEvent(4);
+
+            // AGV = PART_DELIVERED, Assembly Station = IDLE
             } else if (agvEventId == 4 && assemblyStationId == 1) {
+                // READY_FOR_ASSEMBLY_STATION_TO_ASSEMBLE
                 currentProductionEvent = new ProductionEvent(5);
+
+            // AGV = READY_TO_PICK_UP_DRONE, Assembly Station = IDLE
             } else if (agvEventId == 111 && assemblyStationId == 1) {
+                // READY_FOR_AGV_TO_PICK_UP_DRONE_AT_ASSEMBLY_STATION
                 currentProductionEvent = new ProductionEvent(6);
+
+            // AGV = DRONE_PICKED_UP
             } else if (agvEventId == 5) {
+                // READY_FOR_AGV_TO_MOVE_DRONE_TO_WAREHOUSE
                 currentProductionEvent = new ProductionEvent(7);
+            // AGV = DRONE_MOVED_TO_WAREHOUSE, Warehouse = IDLE
+
             } else if (agvEventId == 6 && warehouseEventId == 1) {
+                // READY_FOR_AGV_TO_DELIVER_DRONE_TO_WAREHOUSE
                 currentProductionEvent = new ProductionEvent(8);
+            // AGV = DRONE_DELIVERED
+
             } else if (agvEventId == 7)
+                // READY_FOR_WAREHOUSE_TO_STORE_DRONE
                 currentProductionEvent = new ProductionEvent(9);
 
             warehouseEventId = -1;
