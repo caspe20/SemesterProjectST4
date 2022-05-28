@@ -4,23 +4,20 @@ import services.IAssemblyStation;
 import org.eclipse.paho.client.mqttv3.*;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.springframework.stereotype.Service;
 
-@Service
 public class AssemblyStationClient implements IAssemblyStation {
 
-    MqttClient client;
-    int lastOperation;
-    int currentOperation;
-    String state = "";
-    String timestamp;
+    private MqttClient client;
+    private int lastOperation;
+    private int currentOperation;
+    private String state = "";
+    private String timestamp;
     private boolean constructing = false;
     private boolean done = false;
-    boolean lastProductWasHealthy = true;
+    private boolean lastProductWasHealthy = true;
     private int batchID = 0;
-    JSONObject wholeStatus;
-    String healthStatus = "";
-
+    private JSONObject wholeStatus;
+    private String healthStatus = "";
 
     public AssemblyStationClient() {
         // Establish connection
@@ -74,7 +71,6 @@ public class AssemblyStationClient implements IAssemblyStation {
         Thread assemblyStationPublisherThread = new Thread(new AssemblyStationPublisher(this));
         assemblyStationPublisherThread.start();
         AssemblyStationEventHandler stationEventHandler = new AssemblyStationEventHandler(this, "MES");
-
     }
 
 

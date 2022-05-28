@@ -25,7 +25,6 @@ public class AGVClient implements IAGV {
                 try {
                     responseEntity = restTemplate.getForEntity(resourceUrl, String.class);
                     root = mapper.readTree(responseEntity.getBody());
-
                     Thread.sleep(100);
                 } catch (JsonProcessingException | InterruptedException e) {
                     e.printStackTrace();
@@ -38,7 +37,7 @@ public class AGVClient implements IAGV {
         AGVEventHandler agvEventHandler = new AGVEventHandler(this, "MES");
     }
 
-    //Execute method - OBS is needed for every method
+    // Execute method - OBS is needed for every method
     public void execute() {
         JSONObject executeTest = new JSONObject();
         executeTest.put("State", 2);
@@ -77,7 +76,6 @@ public class AGVClient implements IAGV {
 
     @Override
     public void pickUpPart() {
-        System.out.println("\npicking up part\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PickWarehouseOperation");
         request.put("State", 1);
@@ -87,7 +85,6 @@ public class AGVClient implements IAGV {
 
     @Override
     public void pickUpDrone() {
-        System.out.println("\npicking up drone\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PickAssemblyOperation");
         request.put("State", 1);
@@ -97,7 +94,6 @@ public class AGVClient implements IAGV {
 
     @Override
     public void putDownPart() {
-        System.out.println("\nputting down part\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PutAssemblyOperation");
         request.put("State", 1);
@@ -107,7 +103,6 @@ public class AGVClient implements IAGV {
 
     @Override
     public void putDownDrone() {
-        System.out.println("\nputting down drone\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "PutWarehouseOperation");
         request.put("State", 1);
@@ -117,7 +112,6 @@ public class AGVClient implements IAGV {
 
     @Override
     public void goToAssembly() {
-        System.out.println("\nmoving to assembly\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "MoveToAssemblyOperation");
         request.put("State", 1);
@@ -127,7 +121,6 @@ public class AGVClient implements IAGV {
 
     @Override
     public void goToWarehouse() {
-        System.out.println("\nmoving to warehouse\n");
         HashMap<String, Object> request = new HashMap<>();
         request.put("Program name", "MoveToStorageOperation");
         request.put("State", 1);

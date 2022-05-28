@@ -45,22 +45,18 @@ public class MESEventHandler {
             switch (system) {
                 case "Warehouse" -> {
                     warehouseEvent = new WarehouseEvent(state);
-                    System.out.println("Warehouse: " + warehouseEvent.getEventType().toString());
                     setProductionEvent();
                 }
                 case "AGV" -> {
                     agvEvent = new AGVEvent(state);
-                    System.out.println("AGV: " + agvEvent.getEventType().toString());
                     setProductionEvent();
                 }
                 case "Assembly Station" -> {
                     assemblyStationEvent = new AssemblyStationEvent(state);
-                    System.out.println("Assembly Station: " + assemblyStationEvent.getEventType().toString());
                     setProductionEvent();
                 }
                 case "UI" -> {
                     uiEvent = new UIEvent(state);
-                    System.out.println("UI: " + uiEvent.getEventType().toString());
                     setProductionEvent();
                 }
             }
@@ -76,8 +72,8 @@ public class MESEventHandler {
         // UI = START_PRODUCTION
         if (uiId == 1) {
 
-            // Warehouse = IDLE, AGV = READY_TO_PICK_UP, Assembly Station = IDLE
-            if (warehouseEventId == 1 && agvEventId == 1 && assemblyStationId == 1) {
+            // Warehouse = IDLE, AGV = IDLE, Assembly Station = IDLE
+            if (warehouseEventId == 1 && agvEventId == 0 && assemblyStationId == 1) {
                 // READY_FOR_WAREHOUSE_TO_DISPENSE_PART
                 currentProductionEvent = new ProductionEvent(1);
 
@@ -110,31 +106,24 @@ public class MESEventHandler {
             } else if (agvEventId == 5) {
                 // READY_FOR_AGV_TO_MOVE_DRONE_TO_WAREHOUSE
                 currentProductionEvent = new ProductionEvent(7);
-            // AGV = DRONE_MOVED_TO_WAREHOUSE, Warehouse = IDLE
 
+            // AGV = DRONE_MOVED_TO_WAREHOUSE, Warehouse = IDLE
             } else if (agvEventId == 6 && warehouseEventId == 1) {
                 // READY_FOR_AGV_TO_DELIVER_DRONE_TO_WAREHOUSE
                 currentProductionEvent = new ProductionEvent(8);
-            // AGV = DRONE_DELIVERED
 
+            // AGV = DRONE_DELIVERED
             } else if (agvEventId == 7)
                 // READY_FOR_WAREHOUSE_TO_STORE_DRONE
                 currentProductionEvent = new ProductionEvent(9);
 
-            warehouseEventId = -1;
-            agvEventId = -1;
-            assemblyStationId = -1;
-
-            System.out.println("Old production event: " + productionEvent.getEventType().toString());
-            System.out.println("Current production event: " + currentProductionEvent.getEventType().toString());
-
+            // Only publish new event if changing
             if (productionEvent.getEventType() != currentProductionEvent.getEventType()) {
                 hazelcastConnection.publish(currentProductionEvent.toString(), "MES");
+                System.out.println(currentProductionEvent.getEventType().toString());
                 productionEvent = currentProductionEvent;
-                System.out.println("Published production event: " + currentProductionEvent.getEventType().toString());
             }
         }
-
     }
 
     public static void main(String[] args) {

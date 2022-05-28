@@ -8,8 +8,6 @@ import com.hazelcast.topic.Message;
 import com.hazelcast.topic.MessageListener;
 import events.ProductionEvent;
 import helperclasses.HazelcastConnection;
-import org.springframework.context.event.EventListener;
-import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 

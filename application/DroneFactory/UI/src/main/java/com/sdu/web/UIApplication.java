@@ -1,6 +1,8 @@
 package com.sdu.web;
 
 import com.sdu.web.controller.UIController;
+import events.UIEvent;
+import helperclasses.HazelcastConnection;
 import services.IUIService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,15 +15,15 @@ import org.springframework.stereotype.Service;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, SecurityAutoConfiguration.class},scanBasePackages = "com.sdu.web")
 public class UIApplication implements IUIService {
 
-    ApplicationContext webApplicationContext;
-    private UIEventPublisher publisher;
+    private ApplicationContext webApplicationContext;
+    private HazelcastConnection hazelcastConnection;
 
     @Override
     public void run(String[] args) {
         webApplicationContext = SpringApplication.run(UIApplication.class,args);
         UIController controller = webApplicationContext.getBean(UIController.class);
         controller.setGateway(this);
-        publisher = new UIEventPublisher();
+        hazelcastConnection = new HazelcastConnection();
     }
 
     @Override
@@ -32,13 +34,13 @@ public class UIApplication implements IUIService {
     }
 
     public void startProduction() {
-        publisher.publish("UI");
+        UIEvent uiEvent = new UIEvent(1);
+        hazelcastConnection.publish(uiEvent.toString(), "UI");
     }
 
     public static void main(String[] args) {
         UIApplication app = new UIApplication();
         app.run(args);
-
         UIEventHandler uiEventHandlerMES = new UIEventHandler("MES",app);
         UIEventHandler uiEventHandlerAssets = new UIEventHandler("Assets",app);
     }

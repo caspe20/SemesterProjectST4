@@ -7,7 +7,7 @@ public class AGVEvent {
 
     public enum EventType{
         WAITING(-1),
-        STARTING(0),
+        IDLE(0),
 
         READY_TO_PICK_UP_PART(1),
         PART_PICKED_UP(2),

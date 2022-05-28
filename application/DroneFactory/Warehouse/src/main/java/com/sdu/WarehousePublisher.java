@@ -1,10 +1,7 @@
 package com.sdu;
 
-import events.AssemblyStationEvent;
 import events.WarehouseEvent;
 import helperclasses.HazelcastConnection;
-import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -6,12 +6,9 @@ import com.hazelcast.internal.json.JsonObject;
 import com.hazelcast.topic.ITopic;
 import com.hazelcast.topic.Message;
 import com.hazelcast.topic.MessageListener;
+import events.AGVEvent;
 import events.ProductionEvent;
 import helperclasses.HazelcastConnection;
-import org.springframework.context.event.EventListener;
-import org.springframework.stereotype.Component;
-
-import java.util.Objects;
 
 public class WarehouseEventHandler {
 
@@ -40,16 +37,13 @@ public class WarehouseEventHandler {
             int state = jsonEvent.get("State").asInt();
             ProductionEvent currentProductionEvent = new ProductionEvent(state);
 
-            System.out.println();
-            System.out.println("Old production event: " + productionEvent.getEventType().toString());
-            System.out.println("Current production event " + currentProductionEvent.getEventType().toString());
-            System.out.println();
-
             if (productionEvent.getEventType() != currentProductionEvent.getEventType()) {
                 productionEvent = currentProductionEvent;
                 switch (currentProductionEvent.getEventType().toString()) {
                     case "READY_FOR_WAREHOUSE_TO_DISPENSE_PART" -> {
                         warehouseClient.dispensePart(warehouseClient.getTrayIdNextPart());
+                        AGVEvent agvEvent = new AGVEvent(1);
+                        hazelcastConnection.publish(agvEvent.toString(), "Assets");
                     }
                     case "READY_FOR_WAREHOUSE_TO_STORE_DRONE" -> {
                         warehouseClient.insertDrone(warehouseClient.getTrayIdNextDrone());

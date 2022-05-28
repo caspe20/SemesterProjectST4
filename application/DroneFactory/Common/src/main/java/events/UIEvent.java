@@ -1,7 +1,6 @@
 package events;
 
 import com.hazelcast.internal.json.JsonObject;
-import org.springframework.context.ApplicationEvent;
 
 public class UIEvent  {
 

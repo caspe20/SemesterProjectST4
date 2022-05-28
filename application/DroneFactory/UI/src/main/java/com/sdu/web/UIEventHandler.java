@@ -16,12 +16,8 @@ public class UIEventHandler {
 
     private final HazelcastConnection hazelcastConnection;
 
-    private WarehouseEvent warehouseEvent;
-    private AGVEvent agvEvent;
-    private AssemblyStationEvent assemblyStationEvent;
-    private ProductionEvent productionEvent;
-    private JsonObject obj;
-    private UIApplication app;
+    private final JsonObject obj;
+    private final UIApplication app;
 
     public UIEventHandler(String topic,UIApplication app) {
         this.app = app;
@@ -48,26 +44,22 @@ public class UIEventHandler {
 
             switch (system) {
                 case "MES" -> {
-                    productionEvent = new ProductionEvent(state);
-                    obj.set("mes",new JsonObject().add("state",productionEvent.getEventType().toString()));
-                    //System.out.println(system + ": " + productionEvent.getEventType());
+                    ProductionEvent productionEvent = new ProductionEvent(state);
+                    obj.set("mes",new JsonObject().add("state", productionEvent.getEventType().toString()));
                 }
                 case "Warehouse" -> {
-                    warehouseEvent = new WarehouseEvent(state);
-                    obj.set("warehouse",new JsonObject().add("state",warehouseEvent.getEventType().toString()).add("connection","connected"));
-                    System.out.println(system + ": " + warehouseEvent.getEventType());
+                    WarehouseEvent warehouseEvent = new WarehouseEvent(state);
+                    obj.set("warehouse",new JsonObject().add("state", warehouseEvent.getEventType().toString()).add("connection","connected"));
                     sendToApplication(obj.toString());
                 }
                 case "AGV" -> {
-                    agvEvent = new AGVEvent(state);
-                    System.out.println(system + ": " + agvEvent.getEventType());
-                    obj.set("agv",new JsonObject().add("state",agvEvent.getEventType().toString()).add("connection","connected"));
+                    AGVEvent agvEvent = new AGVEvent(state);
+                    obj.set("agv",new JsonObject().add("state", agvEvent.getEventType().toString()).add("connection","connected"));
                     sendToApplication(obj.toString());
                 }
                 case "Assembly Station" -> {
-                    assemblyStationEvent = new AssemblyStationEvent(state);
-                    System.out.println(system + ": " + assemblyStationEvent.getEventType());
-                    obj.set("assemblystation",new JsonObject().add("state",assemblyStationEvent.getEventType().toString()).add("connection","connected"));
+                    AssemblyStationEvent assemblyStationEvent = new AssemblyStationEvent(state);
+                    obj.set("assemblystation",new JsonObject().add("state", assemblyStationEvent.getEventType().toString()).add("connection","connected"));
                     sendToApplication(obj.toString());
                 }
             }

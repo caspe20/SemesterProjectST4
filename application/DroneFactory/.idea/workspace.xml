@@ -6,12 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssemblyStation/1-tcplocalhost1883/.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssemblyStation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/AssemblyStationEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/AssemblyStationEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/helperclasses/HazelcastConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/helperclasses/HazelcastConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/AGVEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/AGVEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/UIEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/UIEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/WarehouseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/WarehouseEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/main/java/services/IPublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/src/main/java/MESEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/MESEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventPublisher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +52,6 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Core/src/main/java/Main.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AGV/pom.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
@@ -128,7 +141,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UIApplication">
+  <component name="RunManager" selected="Application.AGVClient">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -169,19 +182,6 @@
     <configuration name="MESEventHandler" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MESEventHandler" />
       <module name="Core" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UIEventPublisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sdu.web.UIEventPublisher" />
-      <module name="UI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sdu.web.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -245,6 +245,7 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sdu.web.UIApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -254,14 +255,12 @@
       <item itemvalue="Application.MESEventHandler" />
       <item itemvalue="Application.AssemblyStationClient" />
       <item itemvalue="Application.WarehouseClient" />
-      <item itemvalue="Application.UIEventPublisher" />
       <item itemvalue="Maven.clean install" />
       <item itemvalue="Spring Boot.UIApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.UIApplication" />
-        <item itemvalue="Application.UIEventPublisher" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +296,7 @@
       <workItem from="1653584195327" duration="2103000" />
       <workItem from="1653634038223" duration="9345000" />
       <workItem from="1653643767602" duration="1835000" />
-      <workItem from="1653718763778" duration="7509000" />
+      <workItem from="1653728920933" duration="2737000" />
     </task>
     <servers />
   </component>

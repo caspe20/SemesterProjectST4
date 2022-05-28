@@ -1,6 +1,5 @@
 package com.sdu;
 
-import events.WarehouseEvent;
 import services.IWarehouse;
 import com.sdu.wsdl.*;
 import org.json.JSONArray;
@@ -22,12 +21,9 @@ public class WarehouseClient implements IWarehouse {
 
     // client variables
     private final WebServiceTemplate template;
-    final private String host = "http://localhost:8081/Service.asmx";
-    private Thread updateThread;
-
+    private final String host = "http://localhost:8081/Service.asmx";
 
     public WarehouseClient() {
-
         // Initialize the inventory list
         inventory = new JSONArray();
         state = WarehouseState.getWarehouseState(0);
@@ -41,7 +37,10 @@ public class WarehouseClient implements IWarehouse {
         template.setDefaultUri(host);
 
         // Make update thread.
-        updateThread = new Thread(() -> {
+        // Get json string of the inventory
+        // Update variables
+        // Updates every 100ms
+        Thread updateThread = new Thread(() -> {
             try {
                 while (true) {
                     // Get json string of the inventory
@@ -50,11 +49,7 @@ public class WarehouseClient implements IWarehouse {
                         // Update variables
                         state = WarehouseState.getWarehouseState(obj.getInt("State"));
                         inventory = obj.getJSONArray("Inventory");
-                        // Make updateEvent happen here:
-
-                        // End event
                     }
-
                     // Updates every 100ms
                     Thread.sleep(100);
                 }
@@ -90,8 +85,6 @@ public class WarehouseClient implements IWarehouse {
         item.setTrayId(trayId);
         PickItemResponse response = (PickItemResponse) template.marshalSendAndReceive(host, item);
         trayIdNextPart++;
-        System.out.println("Part dispensed");
-        // send dispensedPart event here
     }
 
     @Override
@@ -101,8 +94,6 @@ public class WarehouseClient implements IWarehouse {
         item.setName("Drone");
         InsertItemResponse response = (InsertItemResponse) template.marshalSendAndReceive(host, item);
         trayIdNextDrone++;
-        System.out.println("Drone inserted");
-        // Send insertedPart event here
     }
 
     public int getTrayIdNextPart() {

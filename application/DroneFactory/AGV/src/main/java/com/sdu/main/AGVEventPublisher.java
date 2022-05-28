@@ -22,29 +22,21 @@ public class AGVEventPublisher implements Runnable {
                 String programName = agvClient.getProgramName().replace("\"", "");
                 int batteryLevel = agvClient.getBatteryPercentage();
 
-//                System.out.println("state: " + state);
-//                System.out.println("programName: " + programName);
-//                System.out.println("battery level: " + batteryLevel);
-
-
-
-                if(state.equals("1") && batteryLevel < 20) {
+                if (state.equals("1") && batteryLevel < 20) {
                     AGVEvent batteryLevelLow = new AGVEvent(98);
                     hazelcastConnection.publish(batteryLevelLow.toString(), "Assets");
                 }
 
-                if(state.equals("1") && programName.equals("no program loaded")) {
-                    AGVEvent readyToPickUp = new AGVEvent(1);
+                if (state.equals("1") && programName.equals("no program loaded")) {
+                    AGVEvent readyToPickUp = new AGVEvent(0);
                     hazelcastConnection.publish(readyToPickUp.toString(), "Assets");
                 }
 
                 if (state.equals("1") && batteryLevel >= 20) {
                     switch (programName) {
                         case "PickWarehouseOperation" -> {
-                            System.out.println("Before");
                             AGVEvent partPickedUp = new AGVEvent(2);
                             hazelcastConnection.publish(partPickedUp.toString(), "Assets");
-                            System.out.println("After");
                         }
                         case "MoveToAssemblyOperation" -> {
                             AGVEvent partMovedToAssemblyStation = new AGVEvent(3);
@@ -106,21 +98,10 @@ public class AGVEventPublisher implements Runnable {
                     hazelcastConnection.publish(charging.toString(), "Assets");
                 }
 
-
-                    Thread.sleep(5000);
+                Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
-
-//    @Override
-//    public void publishEvent(Object event) {
-//
-//    }
-
-//    @Override
-//    public void setApplicationEventPublisher(ApplicationEventPublisher publisher) {
-//        this.publisher = publisher;
-//    }
 }
