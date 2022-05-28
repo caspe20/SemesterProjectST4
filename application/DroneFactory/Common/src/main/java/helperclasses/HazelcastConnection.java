@@ -26,5 +26,4 @@ public class HazelcastConnection {
     public HazelcastInstance getHazelcastInstance() {
         return hazelcastInstance;
     }
-
 }

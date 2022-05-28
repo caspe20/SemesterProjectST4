@@ -1,13 +1,9 @@
 package com.sdu.main;
 
-import events.AGVEvent;
 import events.AssemblyStationEvent;
 import helperclasses.HazelcastConnection;
-import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.ApplicationEventPublisherAware;
-import org.springframework.stereotype.Component;
 
-public class AssemblyStationPublisher implements Runnable { //, ApplicationEventPublisherAware {
+public class AssemblyStationPublisher implements Runnable {
 
     private final HazelcastConnection hazelcastConnection;
     private final AssemblyStationClient assemblyStationClient;
@@ -36,7 +32,6 @@ public class AssemblyStationPublisher implements Runnable { //, ApplicationEvent
                         hazelcastConnection.publish(error.toString(), "Assets");
                     }
                 }
-
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
