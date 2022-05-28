@@ -7,8 +7,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import net.minidev.json.JSONObject;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-
-
 import java.util.HashMap;
 
 public class AGVClient implements IAGV {

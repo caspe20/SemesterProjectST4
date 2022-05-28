@@ -2,9 +2,7 @@ package com.sdu;
 
 import events.WarehouseEvent;
 import helperclasses.HazelcastConnection;
-import org.springframework.stereotype.Component;
 
-@Component
 public class WarehousePublisher implements Runnable {
 
     private final HazelcastConnection hazelcastConnection;
@@ -42,7 +40,4 @@ public class WarehousePublisher implements Runnable {
             }
         }
     }
-
-
-
 }

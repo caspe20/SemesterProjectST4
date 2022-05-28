@@ -120,7 +120,6 @@ public class MESEventHandler {
             // Only publish new event if changing
             if (productionEvent.getEventType() != currentProductionEvent.getEventType()) {
                 hazelcastConnection.publish(currentProductionEvent.toString(), "MES");
-                System.out.println(currentProductionEvent.getEventType().toString());
                 productionEvent = currentProductionEvent;
             }
         }
