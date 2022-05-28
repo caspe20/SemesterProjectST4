@@ -6,26 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="41d0366f-270e-4b79-b93b-10a9775aa555" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AGV/src/main/java/com/sdu/main/AGVEventPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/1-tcplocalhost1883/.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/AssemblyStation/src/main/java/com/sdu/main/AssemblyStationPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/AGVEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/AGVEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/UIEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/UIEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/events/WarehouseEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/main/java/events/WarehouseEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/services/IPublisher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/src/main/java/MESEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Core/src/main/java/MESEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/src/main/java/com/sdu/web/UIEventPublisher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehouseEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse/src/main/java/com/sdu/WarehousePublisher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +277,7 @@
       <workItem from="1653584195327" duration="2103000" />
       <workItem from="1653634038223" duration="9345000" />
       <workItem from="1653643767602" duration="1835000" />
-      <workItem from="1653728920933" duration="2737000" />
+      <workItem from="1653728920933" duration="4736000" />
     </task>
     <servers />
   </component>

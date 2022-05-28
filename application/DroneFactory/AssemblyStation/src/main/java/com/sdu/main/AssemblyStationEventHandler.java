@@ -39,10 +39,9 @@ public class AssemblyStationEventHandler {
 
             if (productionEvent.getEventType() != currentProductionEvent.getEventType()) {
                 productionEvent = currentProductionEvent;
-                if (Objects.equals(currentProductionEvent.getEventType().toString(), "READY_FOR_ASSEMBLY_STATION_TO_ASSEMBLE")) {
+                if (currentProductionEvent.getEventType().getEventId() ==  5) {
                     assemblyStationClient.construct();
                 }
-
             }
         }
     }
